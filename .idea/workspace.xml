@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4800189-6fa1-4892-8868-dba6eb218596" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="c4800189-6fa1-4892-8868-dba6eb218596" name="Default" comment="Created my first window :')&#10;&#10;To run this, the entry point is in the class Life">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Life.java" afterPath="$PROJECT_DIR$/src/Life.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -31,12 +30,14 @@
       <file leaf-file-name="Life.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Life.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.78336555">
-              <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.75435203">
+              <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
               <folding>
-                <element signature="e#220#221#0" expanded="true" />
-                <element signature="e#252#253#0" expanded="true" />
+                <element signature="e#327#328#0" expanded="true" />
+                <element signature="e#359#360#0" expanded="true" />
                 <element signature="docComment;method#run#0;class#Life#0" expanded="true" />
+                <element signature="e#1380#1381#0" expanded="true" />
+                <element signature="e#1430#1431#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -458,7 +459,7 @@
       <created>1449008489139</created>
       <option name="number" value="Default" />
       <updated>1449008489139</updated>
-      <workItem from="1449008490474" duration="622000" />
+      <workItem from="1449008490474" duration="1177000" />
     </task>
     <task id="LOCAL-00001" summary="First class">
       <created>1449008796735</created>
@@ -466,11 +467,17 @@
       <option name="project" value="LOCAL" />
       <updated>1449008796735</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Created my first window :')&#10;&#10;To run this, the entry point is in the class Life">
+      <created>1449009145877</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1449009145877</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="622000" />
+    <option name="totallyTimeSpent" value="1177000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="36" y="55" width="1621" height="904" extended-state="0" />
@@ -507,7 +514,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First class" />
-    <option name="LAST_COMMIT_MESSAGE" value="First class" />
+    <MESSAGE value="Created my first window :')&#10;&#10;To run this, the entry point is in the class Life" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created my first window :')&#10;&#10;To run this, the entry point is in the class Life" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -528,12 +536,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Life.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78336555">
-          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.75435203">
+          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
           <folding>
-            <element signature="e#220#221#0" expanded="true" />
-            <element signature="e#252#253#0" expanded="true" />
+            <element signature="e#327#328#0" expanded="true" />
+            <element signature="e#359#360#0" expanded="true" />
             <element signature="docComment;method#run#0;class#Life#0" expanded="true" />
+            <element signature="e#1380#1381#0" expanded="true" />
+            <element signature="e#1430#1431#0" expanded="true" />
           </folding>
         </state>
       </provider>
