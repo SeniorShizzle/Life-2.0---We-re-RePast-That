@@ -10,8 +10,13 @@ public class SimulationDisplay extends JPanel {
     JFrame parent;
 
 
+    Ball ball;
+
+
     public SimulationDisplay(JFrame parent){
         this.parent = parent;
+
+        this.ball = new Ball(100);
 
         run();
     }
@@ -22,7 +27,7 @@ public class SimulationDisplay extends JPanel {
      */
     private void run(){
         //// Begin the runtime loop
-        Timer timer = new Timer(60, ActionEvent -> {
+        Timer timer = new Timer(10, ActionEvent -> {
         // Each iteration of the timer:
 
             // Update the tick counter
@@ -43,6 +48,9 @@ public class SimulationDisplay extends JPanel {
 
     public void update(){
 
+        // TODO: Update each fish based on the tick count
+        ball.update();
+
     }
 
 
@@ -56,5 +64,10 @@ public class SimulationDisplay extends JPanel {
         //// Paint the window here
         g2d.setColor(new Color(254, 51, 86));
         g2d.drawLine(0,0,300,300);
+
+        // TODO: Draw each fish to the display by calling Fish.x and Fish.y
+
+        g2d.fillOval(ball.x, ball.y, ball.radius, ball.radius);
+
     }
 }
