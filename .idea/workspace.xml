@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4800189-6fa1-4892-8868-dba6eb218596" name="Default" comment="Created my first window :')&#10;&#10;To run this, the entry point is in the class Life">
+    <list default="true" id="c4800189-6fa1-4892-8868-dba6eb218596" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SimulationDisplay.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Life.java" afterPath="$PROJECT_DIR$/src/Life.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Life 2.0 - We're RePast That.iws" />
@@ -27,17 +27,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Life.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Life.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Life.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.75435203">
-              <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
               <folding>
-                <element signature="e#327#328#0" expanded="true" />
-                <element signature="e#359#360#0" expanded="true" />
+                <element signature="docComment;field#mainDisplay#0;class#Life#0" expanded="true" />
+                <element signature="e#316#317#0" expanded="true" />
+                <element signature="e#348#349#0" expanded="true" />
                 <element signature="docComment;method#run#0;class#Life#0" expanded="true" />
-                <element signature="e#1380#1381#0" expanded="true" />
-                <element signature="e#1430#1431#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimulationDisplay.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/SimulationDisplay.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5564516">
+              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+              <folding>
+                <element signature="docComment;field#tickCount#0;class#SimulationDisplay#0" expanded="true" />
+                <element signature="docComment;field#parent#0;class#SimulationDisplay#0" expanded="true" />
+                <element signature="docComment;method#run#0;class#SimulationDisplay#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,6 +87,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Life.java" />
+        <option value="$PROJECT_DIR$/src/SimulationDisplay.java" />
       </list>
     </option>
   </component>
@@ -86,7 +100,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="36" />
-    <option name="y" value="55" />
+    <option name="y" value="91" />
     <option name="width" value="1621" />
     <option name="height" value="904" />
   </component>
@@ -459,7 +473,7 @@
       <created>1449008489139</created>
       <option name="number" value="Default" />
       <updated>1449008489139</updated>
-      <workItem from="1449008490474" duration="1177000" />
+      <workItem from="1449008490474" duration="1738000" />
     </task>
     <task id="LOCAL-00001" summary="First class">
       <created>1449008796735</created>
@@ -473,14 +487,20 @@
       <option name="project" value="LOCAL" />
       <updated>1449009145877</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Runtime loop">
+      <created>1449009689591</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1449009689591</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1177000" />
+    <option name="totallyTimeSpent" value="1738000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="36" y="55" width="1621" height="904" extended-state="0" />
+    <frame x="36" y="91" width="1621" height="904" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -500,7 +520,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24952501" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32881773" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20197044" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -515,7 +535,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First class" />
     <MESSAGE value="Created my first window :')&#10;&#10;To run this, the entry point is in the class Life" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created my first window :')&#10;&#10;To run this, the entry point is in the class Life" />
+    <MESSAGE value="Runtime loop" />
+    <option name="LAST_COMMIT_MESSAGE" value="Runtime loop" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -536,14 +557,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Life.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75435203">
-          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
           <folding>
-            <element signature="e#327#328#0" expanded="true" />
-            <element signature="e#359#360#0" expanded="true" />
+            <element signature="docComment;field#mainDisplay#0;class#Life#0" expanded="true" />
+            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#348#349#0" expanded="true" />
             <element signature="docComment;method#run#0;class#Life#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1430#1431#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SimulationDisplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5564516">
+          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+          <folding>
+            <element signature="docComment;field#tickCount#0;class#SimulationDisplay#0" expanded="true" />
+            <element signature="docComment;field#parent#0;class#SimulationDisplay#0" expanded="true" />
+            <element signature="docComment;method#run#0;class#SimulationDisplay#0" expanded="true" />
           </folding>
         </state>
       </provider>

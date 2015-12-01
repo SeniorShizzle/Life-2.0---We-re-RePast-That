@@ -1,14 +1,14 @@
 import javax.swing.*;
-import javax.swing.plaf.TableHeaderUI;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 
 public class Life extends JFrame {
 
     public static final int WINDOW_WIDTH = 1000;
     public static final int WINDOW_HEIGHT = 1000;
 
-    private long tickCount = 0;
+    /** The main simulation used by the window. */
+    private SimulationDisplay mainDisplay;
+
 
     public static void main(String args[]){
         new Life().run();
@@ -30,36 +30,14 @@ public class Life extends JFrame {
         this.setMinimumSize(new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT));
         this.setPreferredSize(new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT));
 
+        // Add the simulation display to the frame
+        mainDisplay = new SimulationDisplay(this);
+        this.add(mainDisplay);
+        mainDisplay.setBounds(this.getBounds());
+
         // Display the window
         this.setVisible(true);
-
-
-
-        //// Begin the runtime loop
-        Timer timer = new Timer(60, ActionEvent -> {
-            System.out.println("tick");
-
-
-            // Update the tick counter
-            tickCount++;
-
-            // Run the update() subroutine
-            update();
-
-            // Repaint the main window
-            repaint();
-
-
-        });
-        timer.start();
-
     }
-
-    public void update(){
-        System.out.println(this.tickCount);
-    }
-
-     
 
 
 
