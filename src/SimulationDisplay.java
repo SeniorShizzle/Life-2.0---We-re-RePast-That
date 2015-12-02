@@ -1,5 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.AffineTransformOp;
+import java.awt.image.BufferedImageOp;
+import java.io.File;
+import java.net.URL;
 
 public class SimulationDisplay extends JPanel {
 
@@ -9,14 +13,21 @@ public class SimulationDisplay extends JPanel {
     /** The parent JFrame to this panel */
     JFrame parent;
 
-
+    /** a bouncy ball for testing */
     Ball ball;
+
+    GISDisplay gisDisplay;
 
 
     public SimulationDisplay(JFrame parent){
         this.parent = parent;
 
         this.ball = new Ball(100);
+
+        gisDisplay = new GISDisplay(); // create the GISDisplay
+        File file = new File("./data/minimap.csv");
+        gisDisplay.parseMapFile(file); // parse the map data out of the GISDisplay
+
 
         run();
     }
@@ -61,13 +72,26 @@ public class SimulationDisplay extends JPanel {
         // Cast the g object to a g2d for better performance
         Graphics2D g2d = (Graphics2D)g;
 
+        g2d.setBackground(new Color(200, 42, 93));
+
         //// Paint the window here
         g2d.setColor(new Color(254, 51, 86));
-        g2d.drawLine(0,0,300,300);
 
         // TODO: Draw each fish to the display by calling Fish.x and Fish.y
 
+        //// Draw the cached map data
+        g2d.drawImage(gisDisplay.getMapImage(), 0, 0, null);
+
+        //// Draw the bouncy ball (for fun)
         g2d.fillOval(ball.x, ball.y, ball.radius, ball.radius);
 
+
+    }
+
+    /**
+     * Returns the tick count
+     */
+    public long getTickCount(){
+        return this.tickCount;
     }
 }
