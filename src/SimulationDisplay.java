@@ -22,7 +22,7 @@ public class SimulationDisplay extends JPanel {
     public SimulationDisplay(JFrame parent){
         this.parent = parent;
 
-        this.ball = new Ball(100);
+        this.ball = new Ball(70);
 
         gisDisplay = new GISDisplay(); // create the GISDisplay
         File file = new File("./data/minimap.csv");
@@ -38,7 +38,7 @@ public class SimulationDisplay extends JPanel {
      */
     private void run(){
         //// Begin the runtime loop
-        Timer timer = new Timer(10, ActionEvent -> {
+        Timer timer = new Timer(17, ActionEvent -> {
         // Each iteration of the timer:
 
             // Update the tick counter
@@ -83,7 +83,7 @@ public class SimulationDisplay extends JPanel {
         g2d.drawImage(gisDisplay.getMapImage(), 0, 0, null);
 
         //// Draw the bouncy ball (for fun)
-        g2d.fillOval(ball.x, ball.y, ball.radius, ball.radius);
+        g2d.fillOval((int)ball.x, (int)ball.y, ball.diameter, ball.diameter);
 
 
     }
