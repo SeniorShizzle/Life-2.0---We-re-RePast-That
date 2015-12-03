@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class GISDisplay {
 
+	
     private ArrayList<Reach> reaches = new ArrayList<Reach>();
 
 	private int minX;
