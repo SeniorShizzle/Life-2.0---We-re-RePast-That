@@ -1,11 +1,8 @@
 import javax.swing.*;
 
 import java.awt.*;
-<<<<<<< HEAD:SimulationDisplay.java
-import java.io.File;
-=======
 
->>>>>>> master:src/SimulationDisplay.java
+import java.io.File;
 
 public class SimulationDisplay extends JPanel {
 
