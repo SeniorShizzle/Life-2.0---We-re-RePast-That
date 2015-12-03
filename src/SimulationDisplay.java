@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 
-public class SimulationDisplay extends JPanel {
+public class SimulationDisplay extends JPanel implements InterfacePanelDelegate {
 
     /** The serial primary incrementer used to control simulation progress. Incremented once per frame.*/
     private long tickCount = 0;
@@ -29,6 +29,7 @@ public class SimulationDisplay extends JPanel {
         gisDisplay = GISDisplay.getInstance();
 
         interfacePanel = InterfacePanel.getInstance();
+        interfacePanel.registerDelegate(this);
 
         JFrame fishHell = new JFrame("Simulation Parameters");
         fishHell.add(interfacePanel);
@@ -70,6 +71,7 @@ public class SimulationDisplay extends JPanel {
         // TODO: Update each fish based on the tick count
         ball.update();
 
+
     }
 
 
@@ -99,5 +101,14 @@ public class SimulationDisplay extends JPanel {
      */
     public long getTickCount(){
         return this.tickCount;
+    }
+
+
+    /** Updates the model. Delegate method called by our GISDisplay object */
+    @Override
+    public void updateModel() {
+        // TODO: update model parameters based on interface panel settings
+
+        System.out.println(interfacePanel.getNumberOfAgents());
     }
 }

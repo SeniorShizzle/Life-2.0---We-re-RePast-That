@@ -114,6 +114,7 @@ public class GISDisplay {
         // the boundaries should be set now
     }
 
+
     public BufferedImage getMapImage(){
         // If we haven't yet parsed the map data, don't attempt to create and cache the map image
         if (!hasParsedMapData) return null;
@@ -129,7 +130,6 @@ public class GISDisplay {
         g2d.setColor(new Color(179, 200, 153));
         g2d.fillRect(0, 0, Life.WINDOW_WIDTH * 2, Life.WINDOW_HEIGHT * 2);
 
-
         g2d.setColor(new Color(0, 60, 128));
         // Draw the line data to the graphics context
         for (Reach reach : reaches) {
@@ -139,6 +139,7 @@ public class GISDisplay {
 
         return cachedMapData;
     }
+
 
 
     public ArrayList<Reach> getReaches(){
