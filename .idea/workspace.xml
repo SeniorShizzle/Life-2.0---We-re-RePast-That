@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4800189-6fa1-4892-8868-dba6eb218596" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/InterfacePanelDelegate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GISDisplay.java" afterPath="$PROJECT_DIR$/src/GISDisplay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InterfacePanel.java" afterPath="$PROJECT_DIR$/src/InterfacePanel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/armadilloutofhere.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/simple_map.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SimulationDisplay.java" afterPath="$PROJECT_DIR$/src/SimulationDisplay.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -47,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/src/SimulationDisplay.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.58064514">
-              <caret line="87" column="52" selection-start-line="87" selection-start-column="52" selection-end-line="87" selection-end-column="52" />
+              <caret line="92" column="60" selection-start-line="92" selection-start-column="60" selection-end-line="92" selection-end-column="60" />
               <folding>
                 <element signature="docComment;field#tickCount#0;class#SimulationDisplay#0" expanded="true" />
                 <element signature="docComment;field#parent#0;class#SimulationDisplay#0" expanded="true" />
@@ -190,8 +189,8 @@
         <option value="$PROJECT_DIR$/src/GISDisplayDelegate.java" />
         <option value="$PROJECT_DIR$/src/InterfacePanelDelegate.java" />
         <option value="$PROJECT_DIR$/src/GISDisplay.java" />
-        <option value="$PROJECT_DIR$/src/SimulationDisplay.java" />
         <option value="$PROJECT_DIR$/src/InterfacePanel.java" />
+        <option value="$PROJECT_DIR$/src/SimulationDisplay.java" />
       </list>
     </option>
   </component>
@@ -263,6 +262,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Life 2.0 - We're RePast That" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecondLife" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -597,7 +610,7 @@
       <updated>1449008489139</updated>
       <workItem from="1449008490474" duration="12813000" />
       <workItem from="1449173730906" duration="344000" />
-      <workItem from="1449175141788" duration="4061000" />
+      <workItem from="1449175141788" duration="5489000" />
     </task>
     <task id="LOCAL-00001" summary="First class">
       <created>1449008796735</created>
@@ -671,11 +684,17 @@
       <option name="project" value="LOCAL" />
       <updated>1449178944852</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Updated interface panel. Uses delegacy.">
+      <created>1449180637144</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1449180637144</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17218000" />
+    <option name="totallyTimeSpent" value="18646000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="36" y="51" width="1621" height="904" extended-state="0" />
@@ -730,7 +749,8 @@
     <MESSAGE value="Updated project name for GitHub, so we didn't have as many hyphens." />
     <MESSAGE value="gitignore" />
     <MESSAGE value="Created new interface panel which selects Alex's minimap CSV data and interacts with the display. &#10;&#10;Wow gis. Very disply. So map." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created new interface panel which selects Alex's minimap CSV data and interacts with the display. &#10;&#10;Wow gis. Very disply. So map." />
+    <MESSAGE value="Updated interface panel. Uses delegacy." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated interface panel. Uses delegacy." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1005,7 +1025,7 @@
     <entry file="file://$PROJECT_DIR$/src/SimulationDisplay.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.58064514">
-          <caret line="87" column="52" selection-start-line="87" selection-start-column="52" selection-end-line="87" selection-end-column="52" />
+          <caret line="92" column="60" selection-start-line="92" selection-start-column="60" selection-end-line="92" selection-end-column="60" />
           <folding>
             <element signature="docComment;field#tickCount#0;class#SimulationDisplay#0" expanded="true" />
             <element signature="docComment;field#parent#0;class#SimulationDisplay#0" expanded="true" />
