@@ -4,9 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+
 public class FishBuilder {
-	Bag fishBag = new Bag();
-	
 	FileReader fishStateTransitionTable;
 	List<String[]> allRows;
 	ArrayList<Rule> ruleTable = new ArrayList<Rule>();
@@ -57,6 +56,8 @@ public class FishBuilder {
 	} catch (IOException e) {
 		e.printStackTrace();
 	}
+	
+	Fish newFish = new Fish(ruleTable);
 
 }
 }

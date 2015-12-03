@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Fish {
 
-	private int ID;
+	private static int ID = 0;
 	private double birthday;
 	private double age;
 	private double x;
@@ -11,7 +11,7 @@ public class Fish {
 	private double [] position = new double [2];
 	private double currentTick;
 	private ArrayList<Rule> rules;
-	
+	private final Integer myID; 
 	private FishLifeState currentState;
 	
 	/**
@@ -24,14 +24,12 @@ public class Fish {
 	 * Fish constructor
 	 * @param birthday
 	 */
-	public Fish(double birthday, int ID, ArrayList<Rule> rules){
-		this.ID = ID;
-		this.birthday = birthday;
+	public Fish(ArrayList<Rule> rules){
 //		this.age = currentTick - birthday;
 		this.currentState = FishLifeState.EGG_INCUBATION;
 		this.rules = rules;
-	}
-	
+		this.myID = ID++;
+		}
 	/**
 	 * Will call our state transition table and update
 	 * fish's current state, and position.
