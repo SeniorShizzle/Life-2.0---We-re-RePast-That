@@ -1,7 +1,9 @@
 import javax.swing.*;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
+import java.io.File;
 
 public class SimulationDisplay extends JPanel implements InterfacePanelDelegate {
 
