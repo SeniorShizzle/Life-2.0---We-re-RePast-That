@@ -5,7 +5,6 @@ public class Reach {
 	public double length;
 	public double sinkX;
 	public double sinkY;
-
 	private int reachID;
 	private int nextID;
 
@@ -20,6 +19,10 @@ public class Reach {
 				+ Math.pow(sinkY - sourceY, 2)); //distance formula
 		this.nextID = nextID;
 	}
+
+
+
+
 
 	public double getSourceX() {
 		return sourceX;
@@ -62,16 +65,16 @@ public class Reach {
 	}
 
 	public int getNextID() {
-		return nextID;
+		return nextID ;
 	}
 
-	public void setNextID(int nextID) {
-		this.nextID = nextID;
-	}
 
 	public double getLength() {
 		return length;
 	}
 
+	public void setNextID(int nextID) {
+		this.nextID = nextID;
+	}
 
 }

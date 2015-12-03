@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4800189-6fa1-4892-8868-dba6eb218596" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/FishLifeState.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/InterfacePanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GISDisplay.java" afterPath="$PROJECT_DIR$/src/GISDisplay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SimulationDisplay.java" afterPath="$PROJECT_DIR$/src/SimulationDisplay.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Life 2.0 - We're RePast That.iws" />
@@ -47,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/src/SimulationDisplay.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+              <caret line="80" column="47" selection-start-line="80" selection-start-column="47" selection-end-line="80" selection-end-column="47" />
               <folding>
                 <element signature="docComment;field#tickCount#0;class#SimulationDisplay#0" expanded="true" />
                 <element signature="docComment;field#parent#0;class#SimulationDisplay#0" expanded="true" />
@@ -56,7 +53,18 @@
                 <element signature="docComment;field#interfacePanel#0;class#SimulationDisplay#0" expanded="true" />
                 <element signature="docComment;method#run#0;class#SimulationDisplay#0" expanded="true" />
                 <element signature="docComment;method#getTickCount#0;class#SimulationDisplay#0" expanded="true" />
+                <element signature="docComment;method#updateModel#0;class#SimulationDisplay#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InterfacePanelDelegate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/InterfacePanelDelegate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="39" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,22 +72,23 @@
       <file leaf-file-name="GISDisplay.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GISDisplay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5016129">
-              <caret line="123" column="44" selection-start-line="123" selection-start-column="44" selection-end-line="123" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.58064514">
+              <caret line="71" column="26" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
               <folding>
                 <element signature="docComment;field#mapFile#0;class#GISDisplay#0" expanded="true" />
                 <element signature="docComment;field#hasParsedMapData#0;class#GISDisplay#0" expanded="true" />
                 <element signature="docComment;method#GISDisplay#0;class#GISDisplay#0" expanded="true" />
-                <element signature="e#4361#4362#0" expanded="true" />
-                <element signature="e#4396#4397#0" expanded="true" />
-                <element signature="e#4425#4426#0" expanded="true" />
-                <element signature="e#4452#4453#0" expanded="true" />
-                <element signature="e#4480#4481#0" expanded="true" />
-                <element signature="e#4507#4508#0" expanded="true" />
-                <element signature="e#4535#4536#0" expanded="true" />
-                <element signature="e#4562#4563#0" expanded="true" />
-                <element signature="e#4590#4591#0" expanded="true" />
-                <element signature="e#4617#4618#0" expanded="true" />
+                <element signature="docComment;method#sortReaches#0;class#GISDisplay#0" expanded="true" />
+                <element signature="e#4971#4972#0" expanded="true" />
+                <element signature="e#5006#5007#0" expanded="true" />
+                <element signature="e#5035#5036#0" expanded="true" />
+                <element signature="e#5062#5063#0" expanded="true" />
+                <element signature="e#5090#5091#0" expanded="true" />
+                <element signature="e#5117#5118#0" expanded="true" />
+                <element signature="e#5145#5146#0" expanded="true" />
+                <element signature="e#5172#5173#0" expanded="true" />
+                <element signature="e#5200#5201#0" expanded="true" />
+                <element signature="e#5227#5228#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,14 +120,20 @@
       <file leaf-file-name="InterfacePanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/InterfacePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="78" column="65" selection-start-line="78" selection-start-column="65" selection-end-line="78" selection-end-column="65" />
+            <state vertical-scroll-proportion="-16.185184">
+              <caret line="215" column="13" selection-start-line="215" selection-start-column="13" selection-end-line="215" selection-end-column="13" />
               <folding>
+                <element signature="docComment;field#delegates#0;class#InterfacePanel#0" expanded="true" />
+                <element signature="docComment;field#mapFile#0;class#InterfacePanel#0" expanded="true" />
+                <element signature="docComment;field#numberOfAgents#0;class#InterfacePanel#0" expanded="true" />
                 <element signature="docComment;method#ReachBoxes#0;class#InterfacePanel#0" expanded="true" />
                 <element signature="docComment;method#getNumberOfAgents#0;class#InterfacePanel#0" expanded="true" />
                 <element signature="docComment;method#getTransitionTable#0;class#InterfacePanel#0" expanded="true" />
-                <element signature="e#10335#10336#0" expanded="true" />
-                <element signature="e#10373#10374#0" expanded="true" />
+                <element signature="e#10647#10648#0" expanded="true" />
+                <element signature="e#10685#10686#0" expanded="true" />
+                <element signature="docComment;method#registerDelegate#0;class#InterfacePanel#0" expanded="true" />
+                <element signature="e#10810#10811#0" expanded="true" />
+                <element signature="e#10854#10855#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -138,7 +153,7 @@
         <entry file="file://$PROJECT_DIR$/src/Reach.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+              <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -170,6 +185,8 @@
         <option value="$PROJECT_DIR$/src/Life.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/FishLifeState.java" />
+        <option value="$PROJECT_DIR$/src/GISDisplayDelegate.java" />
+        <option value="$PROJECT_DIR$/src/InterfacePanelDelegate.java" />
         <option value="$PROJECT_DIR$/src/InterfacePanel.java" />
         <option value="$PROJECT_DIR$/src/SimulationDisplay.java" />
         <option value="$PROJECT_DIR$/src/GISDisplay.java" />
@@ -247,6 +264,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Life 2.0 - We're RePast That" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecondLife" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -269,6 +300,8 @@
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -277,6 +310,117 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/data" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gitignore</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Reach.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="Application.Run That Shit">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -576,7 +720,7 @@
       <updated>1449008489139</updated>
       <workItem from="1449008490474" duration="12813000" />
       <workItem from="1449173730906" duration="344000" />
-      <workItem from="1449175141788" duration="2834000" />
+      <workItem from="1449175141788" duration="6221000" />
     </task>
     <task id="LOCAL-00001" summary="First class">
       <created>1449008796735</created>
@@ -644,11 +788,47 @@
       <option name="project" value="LOCAL" />
       <updated>1449176443989</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Created new interface panel which selects Alex's minimap CSV data and interacts with the display. &#10;&#10;Wow gis. Very disply. So map.">
+      <created>1449178944852</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1449178944852</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Updated interface panel. Uses delegacy.">
+      <created>1449180637144</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1449180637144</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fish">
+      <created>1449182871126</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1449182871126</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fish">
+      <created>1449183090738</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1449183090738</updated>
+    </task>
+    <task id="LOCAL-00016" summary="images">
+      <created>1449183214820</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1449183214820</updated>
+    </task>
+    <task id="LOCAL-00017" summary="thanks Alex">
+      <created>1449183705794</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1449183705794</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15991000" />
+    <option name="totallyTimeSpent" value="19378000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="36" y="51" width="1621" height="904" extended-state="0" />
@@ -667,7 +847,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881773" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881773" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24952501" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24952501" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -702,7 +882,12 @@
     <MESSAGE value="For the class" />
     <MESSAGE value="Updated project name for GitHub, so we didn't have as many hyphens." />
     <MESSAGE value="gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
+    <MESSAGE value="Created new interface panel which selects Alex's minimap CSV data and interacts with the display. &#10;&#10;Wow gis. Very disply. So map." />
+    <MESSAGE value="Updated interface panel. Uses delegacy." />
+    <MESSAGE value="fish" />
+    <MESSAGE value="images" />
+    <MESSAGE value="thanks Alex" />
+    <option name="LAST_COMMIT_MESSAGE" value="thanks Alex" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -737,6 +922,7 @@
             <element signature="docComment;field#interfacePanel#0;class#SimulationDisplay#0" expanded="true" />
             <element signature="docComment;method#run#0;class#SimulationDisplay#0" expanded="true" />
             <element signature="docComment;method#getTickCount#0;class#SimulationDisplay#0" expanded="true" />
+            <element signature="docComment;method#updateModel#0;class#SimulationDisplay#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -749,16 +935,17 @@
             <element signature="docComment;field#mapFile#0;class#GISDisplay#0" expanded="true" />
             <element signature="docComment;field#hasParsedMapData#0;class#GISDisplay#0" expanded="true" />
             <element signature="docComment;method#GISDisplay#0;class#GISDisplay#0" expanded="true" />
-            <element signature="e#4361#4362#0" expanded="true" />
-            <element signature="e#4396#4397#0" expanded="true" />
-            <element signature="e#4425#4426#0" expanded="true" />
-            <element signature="e#4452#4453#0" expanded="true" />
-            <element signature="e#4480#4481#0" expanded="true" />
-            <element signature="e#4507#4508#0" expanded="true" />
-            <element signature="e#4535#4536#0" expanded="true" />
-            <element signature="e#4562#4563#0" expanded="true" />
-            <element signature="e#4590#4591#0" expanded="true" />
-            <element signature="e#4617#4618#0" expanded="true" />
+            <element signature="docComment;method#sortReaches#0;class#GISDisplay#0" expanded="true" />
+            <element signature="e#4971#4972#0" expanded="true" />
+            <element signature="e#5006#5007#0" expanded="true" />
+            <element signature="e#5035#5036#0" expanded="true" />
+            <element signature="e#5062#5063#0" expanded="true" />
+            <element signature="e#5090#5091#0" expanded="true" />
+            <element signature="e#5117#5118#0" expanded="true" />
+            <element signature="e#5145#5146#0" expanded="true" />
+            <element signature="e#5172#5173#0" expanded="true" />
+            <element signature="e#5200#5201#0" expanded="true" />
+            <element signature="e#5227#5228#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -814,6 +1001,7 @@
             <element signature="docComment;field#interfacePanel#0;class#SimulationDisplay#0" expanded="true" />
             <element signature="docComment;method#run#0;class#SimulationDisplay#0" expanded="true" />
             <element signature="docComment;method#getTickCount#0;class#SimulationDisplay#0" expanded="true" />
+            <element signature="docComment;method#updateModel#0;class#SimulationDisplay#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -826,16 +1014,17 @@
             <element signature="docComment;field#mapFile#0;class#GISDisplay#0" expanded="true" />
             <element signature="docComment;field#hasParsedMapData#0;class#GISDisplay#0" expanded="true" />
             <element signature="docComment;method#GISDisplay#0;class#GISDisplay#0" expanded="true" />
-            <element signature="e#4361#4362#0" expanded="true" />
-            <element signature="e#4396#4397#0" expanded="true" />
-            <element signature="e#4425#4426#0" expanded="true" />
-            <element signature="e#4452#4453#0" expanded="true" />
-            <element signature="e#4480#4481#0" expanded="true" />
-            <element signature="e#4507#4508#0" expanded="true" />
-            <element signature="e#4535#4536#0" expanded="true" />
-            <element signature="e#4562#4563#0" expanded="true" />
-            <element signature="e#4590#4591#0" expanded="true" />
-            <element signature="e#4617#4618#0" expanded="true" />
+            <element signature="docComment;method#sortReaches#0;class#GISDisplay#0" expanded="true" />
+            <element signature="e#4971#4972#0" expanded="true" />
+            <element signature="e#5006#5007#0" expanded="true" />
+            <element signature="e#5035#5036#0" expanded="true" />
+            <element signature="e#5062#5063#0" expanded="true" />
+            <element signature="e#5090#5091#0" expanded="true" />
+            <element signature="e#5117#5118#0" expanded="true" />
+            <element signature="e#5145#5146#0" expanded="true" />
+            <element signature="e#5172#5173#0" expanded="true" />
+            <element signature="e#5200#5201#0" expanded="true" />
+            <element signature="e#5227#5228#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -867,29 +1056,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ball.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.024193548">
           <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/minimap.csv">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -914,32 +1084,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/InterfacePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="65" selection-start-line="78" selection-start-column="65" selection-end-line="78" selection-end-column="65" />
-          <folding>
-            <element signature="docComment;method#ReachBoxes#0;class#InterfacePanel#0" expanded="true" />
-            <element signature="docComment;method#getNumberOfAgents#0;class#InterfacePanel#0" expanded="true" />
-            <element signature="docComment;method#getTransitionTable#0;class#InterfacePanel#0" expanded="true" />
-            <element signature="e#10335#10336#0" expanded="true" />
-            <element signature="e#10373#10374#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Reach.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/InterfacePanelDelegate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="39" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/InterfacePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.185184">
+          <caret line="215" column="13" selection-start-line="215" selection-start-column="13" selection-end-line="215" selection-end-column="13" />
+          <folding>
+            <element signature="docComment;field#delegates#0;class#InterfacePanel#0" expanded="true" />
+            <element signature="docComment;field#mapFile#0;class#InterfacePanel#0" expanded="true" />
+            <element signature="docComment;field#numberOfAgents#0;class#InterfacePanel#0" expanded="true" />
+            <element signature="docComment;method#ReachBoxes#0;class#InterfacePanel#0" expanded="true" />
+            <element signature="docComment;method#getNumberOfAgents#0;class#InterfacePanel#0" expanded="true" />
+            <element signature="docComment;method#getTransitionTable#0;class#InterfacePanel#0" expanded="true" />
+            <element signature="e#10647#10648#0" expanded="true" />
+            <element signature="e#10685#10686#0" expanded="true" />
+            <element signature="docComment;method#registerDelegate#0;class#InterfacePanel#0" expanded="true" />
+            <element signature="e#10810#10811#0" expanded="true" />
+            <element signature="e#10854#10855#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SimulationDisplay.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+          <caret line="80" column="47" selection-start-line="80" selection-start-column="47" selection-end-line="80" selection-end-column="47" />
           <folding>
             <element signature="docComment;field#tickCount#0;class#SimulationDisplay#0" expanded="true" />
             <element signature="docComment;field#parent#0;class#SimulationDisplay#0" expanded="true" />
@@ -948,28 +1132,49 @@
             <element signature="docComment;field#interfacePanel#0;class#SimulationDisplay#0" expanded="true" />
             <element signature="docComment;method#run#0;class#SimulationDisplay#0" expanded="true" />
             <element signature="docComment;method#getTickCount#0;class#SimulationDisplay#0" expanded="true" />
+            <element signature="docComment;method#updateModel#0;class#SimulationDisplay#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/minimap.csv">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ball.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GISDisplay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5016129">
-          <caret line="123" column="44" selection-start-line="123" selection-start-column="44" selection-end-line="123" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.58064514">
+          <caret line="71" column="26" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
           <folding>
             <element signature="docComment;field#mapFile#0;class#GISDisplay#0" expanded="true" />
             <element signature="docComment;field#hasParsedMapData#0;class#GISDisplay#0" expanded="true" />
             <element signature="docComment;method#GISDisplay#0;class#GISDisplay#0" expanded="true" />
-            <element signature="e#4361#4362#0" expanded="true" />
-            <element signature="e#4396#4397#0" expanded="true" />
-            <element signature="e#4425#4426#0" expanded="true" />
-            <element signature="e#4452#4453#0" expanded="true" />
-            <element signature="e#4480#4481#0" expanded="true" />
-            <element signature="e#4507#4508#0" expanded="true" />
-            <element signature="e#4535#4536#0" expanded="true" />
-            <element signature="e#4562#4563#0" expanded="true" />
-            <element signature="e#4590#4591#0" expanded="true" />
-            <element signature="e#4617#4618#0" expanded="true" />
+            <element signature="docComment;method#sortReaches#0;class#GISDisplay#0" expanded="true" />
+            <element signature="e#4971#4972#0" expanded="true" />
+            <element signature="e#5006#5007#0" expanded="true" />
+            <element signature="e#5035#5036#0" expanded="true" />
+            <element signature="e#5062#5063#0" expanded="true" />
+            <element signature="e#5090#5091#0" expanded="true" />
+            <element signature="e#5117#5118#0" expanded="true" />
+            <element signature="e#5145#5146#0" expanded="true" />
+            <element signature="e#5172#5173#0" expanded="true" />
+            <element signature="e#5200#5201#0" expanded="true" />
+            <element signature="e#5227#5228#0" expanded="true" />
           </folding>
         </state>
       </provider>
