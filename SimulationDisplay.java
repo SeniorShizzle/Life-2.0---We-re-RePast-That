@@ -1,9 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.image.AffineTransformOp;
-import java.awt.image.BufferedImageOp;
-import java.io.File;
-import java.net.URL;
 
 public class SimulationDisplay extends JPanel {
 
