@@ -69,6 +69,7 @@ public class GISDisplay {
         }
         finally {
             setBounds();
+            sortReaches();
         }
 
 
