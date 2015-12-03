@@ -1,0 +1,5 @@
+Reach, source_x, source_y, sink_x, sink_y, next,
+1, 1, 1, 3, 3, 2,
+2, 3, 3, 4, 8, 3,
+3, 4, 8, 5, 6, 4,
+4, 5, 6, 2, 2, -1
