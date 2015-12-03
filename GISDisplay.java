@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class GISDisplay {
 
-    private ArrayList<Reach> reaches = new ArrayList<Reach>();
+    private ArrayList<Reach> reaches = new ArrayList<>();
 
 
     private int minX;
@@ -69,8 +69,30 @@ public class GISDisplay {
         }
         finally {
             setBounds();
+            sortReaches();
         }
 
+
+    }
+
+    /**
+     * assumptions: no forks towards the ocean, lines have consistent source to
+     * sink order, they intersect, ignores ocean
+     */
+    private void sortReaches() {
+         double x, y;
+         for (int i = 0; i < reaches.size(); i++) {
+            x = reaches.get(i).getSinkX();
+            y = reaches.get(i).getSinkY();
+             for (Reach reache : reaches) {
+                 if (reache.getSourceX() == x && reache.getSourceY() == y) {
+                     reaches.get(i).setNextID(reache.getReachID());
+
+                 }
+
+             }
+
+        }
 
     }
 
@@ -114,6 +136,7 @@ public class GISDisplay {
         // the boundaries should be set now
     }
 
+
     public BufferedImage getMapImage(){
         // If we haven't yet parsed the map data, don't attempt to create and cache the map image
         if (!hasParsedMapData) return null;
@@ -129,7 +152,6 @@ public class GISDisplay {
         g2d.setColor(new Color(179, 200, 153));
         g2d.fillRect(0, 0, Life.WINDOW_WIDTH * 2, Life.WINDOW_HEIGHT * 2);
 
-
         g2d.setColor(new Color(0, 60, 128));
         // Draw the line data to the graphics context
         for (Reach reach : reaches) {
@@ -139,6 +161,7 @@ public class GISDisplay {
 
         return cachedMapData;
     }
+
 
 
     public ArrayList<Reach> getReaches(){

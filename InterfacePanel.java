@@ -10,6 +10,11 @@ import java.util.ArrayList;
 public class InterfacePanel extends JPanel {
 
     /**
+     * This is the list of our delegate objects. We should notify all of them when appropriate
+     */
+    private ArrayList<InterfacePanelDelegate> delegates = new ArrayList<>();
+
+    /**
      * {@code true} if the interface buttons have already been established on the User Panel
      */
     private boolean hasCreatedUserPanel = false;
@@ -189,6 +194,10 @@ public class InterfacePanel extends JPanel {
         spawnEnterButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         spawnEnterButton.addActionListener(ActionListener -> {
             // Save the value inside spawnCountField to numberOfAgents
+
+
+
+
             long tempAgentCount = 0;
             try {
                 tempAgentCount = Long.parseLong(spawnCountField.getText());
@@ -200,6 +209,10 @@ public class InterfacePanel extends JPanel {
                 JOptionPane.showMessageDialog(null, "Please enter a valid positive number less than 9 quintillion");
             } else {
                 numberOfAgents = tempAgentCount;
+            }
+
+            for (InterfacePanelDelegate delegate : delegates) {
+                delegate.updateModel();
             }
         });
 
@@ -262,6 +275,13 @@ public class InterfacePanel extends JPanel {
      */
     public File getTransitionTable(){
         return transitionTable;
+    }
+
+    /**
+     * Registers an additional delegate
+     */
+    public void registerDelegate(InterfacePanelDelegate delegate) {
+        this.delegates.add(delegate);
     }
 
 }
