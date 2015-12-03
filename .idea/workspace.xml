@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4800189-6fa1-4892-8868-dba6eb218596" name="Default" comment="Reading the GIS File">
+    <list default="true" id="c4800189-6fa1-4892-8868-dba6eb218596" name="Default" comment="Fixes">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/resources/inherit.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/opencsv-3.6.jar" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/lib/shapefilereader-1.0.jar" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/AbstractMultiPointShape.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/AbstractMultiPointShape.html" />
@@ -20,6 +21,8 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/class-use/AbstractShape.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/BAUtil.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/class-use/BAUtil.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Bag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Ball.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/examples/example/BigFileExample.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/Const.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/class-use/Const.html" />
@@ -27,14 +30,20 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/exception/class-use/DataStreamEOFException.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/DoubleSerializer.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/class-use/DoubleSerializer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/FishBuilder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/FishLifeState.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GISDisplay.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/HexaUtil.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/class-use/HexaUtil.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/ISUtil.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/class-use/ISUtil.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/IntSerializer.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/class-use/IntSerializer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/InterfacePanel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/InterfacePanelDelegate.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/exception/InvalidShapeFileException.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/exception/class-use/InvalidShapeFileException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Life.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/MultiPatchShape.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/MultiPatchShape.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/MultiPointMShape.html" />
@@ -67,6 +76,8 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/PolylineShape.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/PolylineZShape.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/PolylineZShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Reach.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Rule.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/header/ShapeFileHeader.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/header/class-use/ShapeFileHeader.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/ShapeFileReader.html" />
@@ -76,6 +87,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/ShapeType.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/class-use/ShapeType.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/examples/example/SimpleExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SimulationDisplay.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/ValidationPreferences.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/class-use/ValidationPreferences.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/allclasses-frame.html" />
@@ -115,17 +127,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/package-use.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/serialized-form.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/stylesheet.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Bag.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Ball.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FishBuilder.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/FishLifeState.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GISDisplay.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/InterfacePanel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/InterfacePanelDelegate.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Life.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Reach.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rule.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SimulationDisplay.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SecondLife.iml" afterPath="$PROJECT_DIR$/SecondLife.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Life 2.0 - We're RePast That.iws" />
@@ -149,14 +151,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="minimap.csv" pinned="false" current-in-tab="true">
+      <file leaf-file-name="minimap.csv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/minimap.csv">
           <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.12295082">
+            <state vertical-scroll-proportion="-2.0689654">
               <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FishBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FishBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="61" column="8" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bag.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Bag.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7969052">
+              <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -193,6 +215,8 @@
         <option value="$PROJECT_DIR$/src/InterfacePanel.java" />
         <option value="$PROJECT_DIR$/src/SimulationDisplay.java" />
         <option value="$PROJECT_DIR$/src/GISDisplay.java" />
+        <option value="$PROJECT_DIR$/src/FishBuilder.java" />
+        <option value="$PROJECT_DIR$/src/Bag.java" />
       </list>
     </option>
   </component>
@@ -204,8 +228,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="36" />
-    <option name="y" value="51" />
+    <option name="x" value="77" />
+    <option name="y" value="25" />
     <option name="width" value="1621" />
     <option name="height" value="904" />
   </component>
@@ -253,6 +277,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Life 2.0 - We're RePast That" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecondLife" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -266,15 +304,15 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/shapefilereader-1/lib/shapefilereader-1.0.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/opencsv-3.6.jar!/" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
@@ -283,6 +321,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/data" />
     </key>
   </component>
@@ -695,7 +734,7 @@
       <updated>1449008489139</updated>
       <workItem from="1449008490474" duration="12813000" />
       <workItem from="1449173730906" duration="344000" />
-      <workItem from="1449175141788" duration="7495000" />
+      <workItem from="1449175141788" duration="7819000" />
     </task>
     <task id="LOCAL-00001" summary="First class">
       <created>1449008796735</created>
@@ -811,15 +850,21 @@
       <option name="project" value="LOCAL" />
       <updated>1449185343624</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Reading the GIS File">
+      <created>1449185445107</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1449185445107</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20652000" />
+    <option name="totallyTimeSpent" value="20976000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="36" y="51" width="1621" height="904" extended-state="0" />
-    <editor active="false" />
+    <frame x="77" y="25" width="1621" height="904" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -831,13 +876,13 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32881773" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881773" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881773" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32881773" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24952501" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24952501" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24952501" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20197044" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -877,7 +922,8 @@
     <MESSAGE value="what" />
     <MESSAGE value="added ESRI shape file libraries" />
     <MESSAGE value="Reading the GIS File" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reading the GIS File" />
+    <MESSAGE value="Fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -923,8 +969,24 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12295082">
+        <state vertical-scroll-proportion="-2.0689654">
           <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FishBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="8" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7969052">
+          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -994,7 +1056,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>shapefilereader-1.0</last-edited>
+          <last-edited>opencsv-3.6</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
