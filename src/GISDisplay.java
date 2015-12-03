@@ -78,7 +78,10 @@ public class GISDisplay {
 
 	/**
 	 * assumptions: no forks towards the ocean, lines have consistent source to
-	 * sink order, they intersect, ignores ocean
+	 * sink order, they intersect. Ignores ocean (does not modify its endpoint).
+	 * 
+	 * Works by taking the endpoint of each reach, and searching for a startpoint of another reach that is equal to it.
+	 * Then sets the nextID of the first reach to the ID of the second.
 	 * @param startX
 	 * @param startY
 	 */
