@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4800189-6fa1-4892-8868-dba6eb218596" name="Default" comment="added ESRI shape file libraries">
+    <list default="true" id="c4800189-6fa1-4892-8868-dba6eb218596" name="Default" comment="Reading the GIS File">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/resources/inherit.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/reaches_edt.REACHNAME.atx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/reaches_edt.dbf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/reaches_edt.sbn" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/reaches_edt.sbx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/reaches_edt.shp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/reaches_edt.shx" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/lib/shapefilereader-1.0.jar" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/AbstractMultiPointShape.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/AbstractMultiPointShape.html" />
@@ -119,12 +113,19 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/package-use.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/package-use.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/package-use.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/reaches_edt.prj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/reaches_edt.shp.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/serialized-form.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/stylesheet.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GISDisplay.java" afterPath="$PROJECT_DIR$/src/GISDisplay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SecondLife.iml" afterPath="$PROJECT_DIR$/SecondLife.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Bag.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ball.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FishBuilder.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FishLifeState.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/GISDisplay.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/InterfacePanel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/InterfacePanelDelegate.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Life.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Reach.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Rule.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SimulationDisplay.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Life 2.0 - We're RePast That.iws" />
@@ -148,134 +149,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Life.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Life.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="19" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="19" />
-              <folding>
-                <element signature="e#316#317#0" expanded="true" />
-                <element signature="e#348#349#0" expanded="true" />
-                <element signature="docComment;method#run#0;class#Life#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimulationDisplay.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SimulationDisplay.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="80" column="47" selection-start-line="80" selection-start-column="47" selection-end-line="80" selection-end-column="47" />
-              <folding>
-                <element signature="docComment;field#tickCount#0;class#SimulationDisplay#0" expanded="true" />
-                <element signature="docComment;field#parent#0;class#SimulationDisplay#0" expanded="true" />
-                <element signature="docComment;field#ball#0;class#SimulationDisplay#0" expanded="true" />
-                <element signature="docComment;field#gisDisplay#0;class#SimulationDisplay#0" expanded="true" />
-                <element signature="docComment;field#interfacePanel#0;class#SimulationDisplay#0" expanded="true" />
-                <element signature="docComment;method#run#0;class#SimulationDisplay#0" expanded="true" />
-                <element signature="docComment;method#getTickCount#0;class#SimulationDisplay#0" expanded="true" />
-                <element signature="docComment;method#updateModel#0;class#SimulationDisplay#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InterfacePanelDelegate.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/InterfacePanelDelegate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="39" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GISDisplay.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/GISDisplay.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4919355">
-              <caret line="115" column="73" selection-start-line="115" selection-start-column="73" selection-end-line="115" selection-end-column="73" />
-              <folding>
-                <element signature="docComment;field#mapFile#0;class#GISDisplay#0" expanded="true" />
-                <element signature="docComment;field#hasParsedMapData#0;class#GISDisplay#0" expanded="true" />
-                <element signature="docComment;method#GISDisplay#0;class#GISDisplay#0" expanded="true" />
-                <element signature="docComment;method#sortReaches#0;class#GISDisplay#0" expanded="true" />
-                <element signature="e#7363#7364#0" expanded="true" />
-                <element signature="e#7398#7399#0" expanded="true" />
-                <element signature="e#7427#7428#0" expanded="true" />
-                <element signature="e#7454#7455#0" expanded="true" />
-                <element signature="e#7482#7483#0" expanded="true" />
-                <element signature="e#7509#7510#0" expanded="true" />
-                <element signature="e#7537#7538#0" expanded="true" />
-                <element signature="e#7564#7565#0" expanded="true" />
-                <element signature="e#7592#7593#0" expanded="true" />
-                <element signature="e#7619#7620#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ball.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Ball.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="minimap.csv" pinned="false" current-in-tab="false">
+      <file leaf-file-name="minimap.csv" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/minimap.csv">
           <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InterfacePanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/InterfacePanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.185184">
-              <caret line="215" column="13" selection-start-line="215" selection-start-column="13" selection-end-line="215" selection-end-column="13" />
-              <folding>
-                <element signature="docComment;field#delegates#0;class#InterfacePanel#0" expanded="true" />
-                <element signature="docComment;field#mapFile#0;class#InterfacePanel#0" expanded="true" />
-                <element signature="docComment;field#numberOfAgents#0;class#InterfacePanel#0" expanded="true" />
-                <element signature="docComment;method#ReachBoxes#0;class#InterfacePanel#0" expanded="true" />
-                <element signature="docComment;method#getNumberOfAgents#0;class#InterfacePanel#0" expanded="true" />
-                <element signature="docComment;method#getTransitionTable#0;class#InterfacePanel#0" expanded="true" />
-                <element signature="e#10647#10648#0" expanded="true" />
-                <element signature="e#10685#10686#0" expanded="true" />
-                <element signature="docComment;method#registerDelegate#0;class#InterfacePanel#0" expanded="true" />
-                <element signature="e#10810#10811#0" expanded="true" />
-                <element signature="e#10854#10855#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FishLifeState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FishLifeState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Reach.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Reach.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.12295082">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -369,34 +250,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="SecondLife" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Life 2.0 - We're RePast That" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SecondLife" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Life 2.0 - We're RePast That" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SecondLife" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -842,7 +695,7 @@
       <updated>1449008489139</updated>
       <workItem from="1449008490474" duration="12813000" />
       <workItem from="1449173730906" duration="344000" />
-      <workItem from="1449175141788" duration="7365000" />
+      <workItem from="1449175141788" duration="7495000" />
     </task>
     <task id="LOCAL-00001" summary="First class">
       <created>1449008796735</created>
@@ -952,15 +805,21 @@
       <option name="project" value="LOCAL" />
       <updated>1449183849276</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Reading the GIS File">
+      <created>1449185343624</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1449185343624</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20522000" />
+    <option name="totallyTimeSpent" value="20652000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="36" y="51" width="1621" height="904" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -972,14 +831,14 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881773" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32881773" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881773" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24952501" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24952501" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20197044" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24952501" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20197044" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1017,7 +876,8 @@
     <MESSAGE value="thanks Alex" />
     <MESSAGE value="what" />
     <MESSAGE value="added ESRI shape file libraries" />
-    <option name="LAST_COMMIT_MESSAGE" value="added ESRI shape file libraries" />
+    <MESSAGE value="Reading the GIS File" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reading the GIS File" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1028,66 +888,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Life.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="docComment;method#run#0;class#Life#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SimulationDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-          <folding>
-            <element signature="docComment;field#tickCount#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;field#parent#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;field#ball#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;field#gisDisplay#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;field#interfacePanel#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;method#run#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;method#getTickCount#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;method#updateModel#0;class#SimulationDisplay#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GISDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="43" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
-          <folding>
-            <element signature="docComment;field#mapFile#0;class#GISDisplay#0" expanded="true" />
-            <element signature="docComment;field#hasParsedMapData#0;class#GISDisplay#0" expanded="true" />
-            <element signature="docComment;method#GISDisplay#0;class#GISDisplay#0" expanded="true" />
-            <element signature="docComment;method#sortReaches#0;class#GISDisplay#0" expanded="true" />
-            <element signature="e#7363#7364#0" expanded="true" />
-            <element signature="e#7398#7399#0" expanded="true" />
-            <element signature="e#7427#7428#0" expanded="true" />
-            <element signature="e#7454#7455#0" expanded="true" />
-            <element signature="e#7482#7483#0" expanded="true" />
-            <element signature="e#7509#7510#0" expanded="true" />
-            <element signature="e#7537#7538#0" expanded="true" />
-            <element signature="e#7564#7565#0" expanded="true" />
-            <element signature="e#7592#7593#0" expanded="true" />
-            <element signature="e#7619#7620#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ball.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/minimap.csv">
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
@@ -1099,74 +899,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Reach.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Life.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
-          <folding>
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="docComment;method#run#0;class#Life#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SimulationDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-          <folding>
-            <element signature="docComment;field#tickCount#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;field#parent#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;field#ball#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;field#gisDisplay#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;field#interfacePanel#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;method#run#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;method#getTickCount#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;method#updateModel#0;class#SimulationDisplay#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GISDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="43" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
-          <folding>
-            <element signature="docComment;field#mapFile#0;class#GISDisplay#0" expanded="true" />
-            <element signature="docComment;field#hasParsedMapData#0;class#GISDisplay#0" expanded="true" />
-            <element signature="docComment;method#GISDisplay#0;class#GISDisplay#0" expanded="true" />
-            <element signature="docComment;method#sortReaches#0;class#GISDisplay#0" expanded="true" />
-            <element signature="e#7363#7364#0" expanded="true" />
-            <element signature="e#7398#7399#0" expanded="true" />
-            <element signature="e#7427#7428#0" expanded="true" />
-            <element signature="e#7454#7455#0" expanded="true" />
-            <element signature="e#7482#7483#0" expanded="true" />
-            <element signature="e#7509#7510#0" expanded="true" />
-            <element signature="e#7537#7538#0" expanded="true" />
-            <element signature="e#7564#7565#0" expanded="true" />
-            <element signature="e#7592#7593#0" expanded="true" />
-            <element signature="e#7619#7620#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ball.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/minimap.csv">
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
@@ -1174,14 +906,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Reach.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1194,118 +918,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FishLifeState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Life.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="19" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="19" />
-          <folding>
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="docComment;method#run#0;class#Life#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Reach.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InterfacePanelDelegate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="39" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InterfacePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.185184">
-          <caret line="215" column="13" selection-start-line="215" selection-start-column="13" selection-end-line="215" selection-end-column="13" />
-          <folding>
-            <element signature="docComment;field#delegates#0;class#InterfacePanel#0" expanded="true" />
-            <element signature="docComment;field#mapFile#0;class#InterfacePanel#0" expanded="true" />
-            <element signature="docComment;field#numberOfAgents#0;class#InterfacePanel#0" expanded="true" />
-            <element signature="docComment;method#ReachBoxes#0;class#InterfacePanel#0" expanded="true" />
-            <element signature="docComment;method#getNumberOfAgents#0;class#InterfacePanel#0" expanded="true" />
-            <element signature="docComment;method#getTransitionTable#0;class#InterfacePanel#0" expanded="true" />
-            <element signature="e#10647#10648#0" expanded="true" />
-            <element signature="e#10685#10686#0" expanded="true" />
-            <element signature="docComment;method#registerDelegate#0;class#InterfacePanel#0" expanded="true" />
-            <element signature="e#10810#10811#0" expanded="true" />
-            <element signature="e#10854#10855#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SimulationDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="47" selection-start-line="80" selection-start-column="47" selection-end-line="80" selection-end-column="47" />
-          <folding>
-            <element signature="docComment;field#tickCount#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;field#parent#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;field#ball#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;field#gisDisplay#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;field#interfacePanel#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;method#run#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;method#getTickCount#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;method#updateModel#0;class#SimulationDisplay#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/minimap.csv">
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.12295082">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ball.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GISDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4919355">
-          <caret line="115" column="73" selection-start-line="115" selection-start-column="73" selection-end-line="115" selection-end-column="73" />
-          <folding>
-            <element signature="docComment;field#mapFile#0;class#GISDisplay#0" expanded="true" />
-            <element signature="docComment;field#hasParsedMapData#0;class#GISDisplay#0" expanded="true" />
-            <element signature="docComment;method#GISDisplay#0;class#GISDisplay#0" expanded="true" />
-            <element signature="docComment;method#sortReaches#0;class#GISDisplay#0" expanded="true" />
-            <element signature="e#7363#7364#0" expanded="true" />
-            <element signature="e#7398#7399#0" expanded="true" />
-            <element signature="e#7427#7428#0" expanded="true" />
-            <element signature="e#7454#7455#0" expanded="true" />
-            <element signature="e#7482#7483#0" expanded="true" />
-            <element signature="e#7509#7510#0" expanded="true" />
-            <element signature="e#7537#7538#0" expanded="true" />
-            <element signature="e#7564#7565#0" expanded="true" />
-            <element signature="e#7592#7593#0" expanded="true" />
-            <element signature="e#7619#7620#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
