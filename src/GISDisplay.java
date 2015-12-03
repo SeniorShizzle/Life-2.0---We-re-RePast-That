@@ -74,6 +74,27 @@ public class GISDisplay {
 
     }
 
+    /**
+     * assumptions: no forks towards the ocean, lines have consistent source to
+     * sink order, they intersect, ignores ocean
+     */
+    private void sortReaches() {
+         double x, y;
+         for (int i = 0; i < reaches.size(); i++) {
+            x = reaches.get(i).getSinkX();
+            y = reaches.get(i).getSinkY();
+             for (Reach reache : reaches) {
+                 if (reache.getSourceX() == x && reache.getSourceY() == y) {
+                     reaches.get(i).setNextID(reache.getReachID());
+
+                 }
+
+             }
+
+        }
+
+    }
+
     private void setBounds(){
         for (Reach reach : reaches){
             if (reach.sourceX < minX){
