@@ -22,7 +22,7 @@ public class Life extends JFrame {
         System.out.println("We're aboard!");
 
         // Set the window parameters
-        this.setTitle("Life 2.0 — We're RePast That™");
+        this.setTitle("SecondLife — We're RePast That™");
         this.setBackground(new Color(31, 31, 31));
         this.setResizable(false);
 
