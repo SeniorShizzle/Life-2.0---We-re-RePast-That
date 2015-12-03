@@ -1,7 +1,11 @@
 import javax.swing.*;
 
 import java.awt.*;
+<<<<<<< HEAD:SimulationDisplay.java
 import java.io.File;
+=======
+
+>>>>>>> master:src/SimulationDisplay.java
 
 public class SimulationDisplay extends JPanel {
 
@@ -9,12 +13,17 @@ public class SimulationDisplay extends JPanel {
     private long tickCount = 0;
 
     /** The parent JFrame to this panel */
-    JFrame parent;
+    private JFrame parent;
 
     /** a bouncy ball for testing */
-    Ball ball;
+    private Ball ball;
 
-    GISDisplay gisDisplay;
+    /** The main GISDisplay which controls displaying the map image*/
+    private GISDisplay gisDisplay;
+
+    /** The main interface panel, for selecting interface parameters */
+    private InterfacePanel interfacePanel;
+
 
 
     public SimulationDisplay(JFrame parent){
@@ -22,9 +31,15 @@ public class SimulationDisplay extends JPanel {
 
         this.ball = new Ball(70);
 
-        gisDisplay = new GISDisplay(); // create the GISDisplay
-        File file = new File("./data/minimap.csv");
-        gisDisplay.parseMapFile(file); // parse the map data out of the GISDisplay
+        gisDisplay = GISDisplay.getInstance();
+
+        interfacePanel = InterfacePanel.getInstance();
+
+        JFrame fishHell = new JFrame("Simulation Parameters");
+        fishHell.add(interfacePanel);
+
+        fishHell.setVisible(true);
+        fishHell.toFront();
 
 
         run();
@@ -70,12 +85,10 @@ public class SimulationDisplay extends JPanel {
         // Cast the g object to a g2d for better performance
         Graphics2D g2d = (Graphics2D)g;
 
-        g2d.setBackground(new Color(200, 42, 93));
-
         //// Paint the window here
         g2d.setColor(new Color(254, 51, 86));
 
-        // TODO: Draw each fish to the display by calling Fish.x and Fish.y
+        // TODO: Draw each fish to the display by calling Fish.x and Fish.y on the FishManager.getFishes()
 
         //// Draw the cached map data
         g2d.drawImage(gisDisplay.getMapImage(), 0, 0, null);

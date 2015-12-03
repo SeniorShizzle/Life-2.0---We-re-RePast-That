@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class GISDisplay {
 
-    private ArrayList<Reach> reaches = new ArrayList<>();
+    private ArrayList<Reach> reaches = new ArrayList<Reach>();
 
 
     private int minX;
@@ -16,9 +16,27 @@ public class GISDisplay {
 
     private BufferedImage cachedMapData;
 
+    /** The map file to parse */
+    private File mapFile;
 
-    public GISDisplay(){
-        // do stuff here
+    private static GISDisplay instance;
+
+    /** TRUE if the map data has been parsed */
+    private boolean hasParsedMapData = false;
+
+    public static GISDisplay getInstance(){
+        if (instance == null) instance = new GISDisplay();
+
+        return instance;
+    }
+
+
+    /**
+     * Singleton GISDisplay should be accessed by calling {@code GISDisplay.getInstance()}
+     */
+    @Deprecated
+    private GISDisplay(){
+        // Private for singletondom
     }
 
     public void parseMapFile(File file) {
@@ -42,8 +60,12 @@ public class GISDisplay {
                 reaches.add(new Reach(id, sourceX, sourceY, sinkX, sinkY, nextID));
             }
 
+            hasParsedMapData = true;
+
         } catch (Exception e){
+
             System.out.println(e);
+            hasParsedMapData = false;
         }
         finally {
             setBounds();
@@ -93,6 +115,9 @@ public class GISDisplay {
     }
 
     public BufferedImage getMapImage(){
+        // If we haven't yet parsed the map data, don't attempt to create and cache the map image
+        if (!hasParsedMapData) return null;
+
         if (cachedMapData != null) return cachedMapData; // it's already created and cached, lets return this
 
         // Let's create the buffered image to cache
