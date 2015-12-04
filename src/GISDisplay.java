@@ -5,24 +5,27 @@ import org.nocrala.tools.gis.data.esri.shapefile.shape.PointData;
 import org.nocrala.tools.gis.data.esri.shapefile.shape.shapes.MultiPointZShape;
 import org.nocrala.tools.gis.data.esri.shapefile.shape.shapes.PointShape;
 import org.nocrala.tools.gis.data.esri.shapefile.shape.shapes.PolygonShape;
+import org.nocrala.tools.gis.data.esri.shapefile.shape.shapes.PolylineShape;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class GISDisplay {
 
     private ArrayList<Reach> reaches = new ArrayList<>();
 
+    private double minX;
+    private double minY;
+    private double maxX;
+    private double maxY;
 
-    private int minX;
-    private int minY;
-    private int maxX;
-    private int maxY;
-
+    /** The cached map image to display */
     private BufferedImage cachedMapData;
 
     /** The map file to parse */
@@ -87,12 +90,18 @@ public class GISDisplay {
     }
 
     private void brokenMethod() throws Exception{
-        FileInputStream is = new FileInputStream(
-                "./data/reaches_edt.shp");
+        FileInputStream is = new FileInputStream("./data/reaches_edt.shp");
         ShapeFileReader r = new ShapeFileReader(is);
 
         ShapeFileHeader h = r.getHeader();
         System.out.println("The shape type of this files is " + h.getShapeType());
+
+        // Set the boundaries
+        this.minX = h.getBoxMinX();
+        this.minY = h.getBoxMinY();
+
+        this.maxX = h.getBoxMaxX();
+        this.maxY = h.getBoxMaxY();
 
         int total = 0;
         AbstractShape s;
@@ -118,8 +127,19 @@ public class GISDisplay {
                                 + " points.");
                     }
                     break;
+
+
+                //// OUR PRIMARY CASE - Build the Reach objects here
                 case POLYLINE:
-                    System.out.println("WHAT WHAT");
+                    PolylineShape aPolyline = (PolylineShape) s;
+                    // System.out.println("I read a Polyline with " + aPolyline.getNumberOfParts() + " parts and "  + aPolyline.getNumberOfPoints() + " points");
+                    for (int i = 0; i < aPolyline.getNumberOfParts(); i++) {
+
+                        // Create each polyline
+                        PointData[] points = aPolyline.getPointsOfPart(i);
+
+                        // System.out.println("- part " + i + " has " + points.length + " points.");
+                    }
                     break;
                 default:
                     System.out.println("Read other type of shape.");
@@ -153,6 +173,8 @@ public class GISDisplay {
 
     }
 
+    /** Sets the bounds by iterating over the reach objects. Deprecated if using ArcMap GIS data */
+    @Deprecated
     private void setBounds(){
         for (Reach reach : reaches){
             if (reach.sourceX < minX){
@@ -220,25 +242,24 @@ public class GISDisplay {
     }
 
 
-
     public ArrayList<Reach> getReaches(){
         return this.reaches;
     }
 
 
-    public int getMinX() {
+    public double getMinX() {
         return minX;
     }
 
-    public int getMinY() {
+    public double getMinY() {
         return minY;
     }
 
-    public int getMaxX() {
+    public double getMaxX() {
         return maxX;
     }
 
-    public int getMaxY() {
+    public double getMaxY() {
         return maxY;
     }
 

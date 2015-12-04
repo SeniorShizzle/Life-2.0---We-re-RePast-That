@@ -1,3 +1,7 @@
+import org.nocrala.tools.gis.data.esri.shapefile.shape.PointData;
+
+import java.awt.*;
+
 public class Reach {
 
 	public double sourceX;
@@ -7,6 +11,9 @@ public class Reach {
 	public double sinkY;
 	private int reachID;
 	private int nextID;
+
+
+	private PointData[] points;
 
 	public Reach(int reachID, double sourceX, double sourceY, double sinkX,
 			double sinkY, int nextID) {
@@ -18,6 +25,12 @@ public class Reach {
 		this.length = Math.sqrt(Math.pow(sinkX - sourceX, 2)
 				+ Math.pow(sinkY - sourceY, 2)); //distance formula
 		this.nextID = nextID;
+	}
+
+	public Reach(PointData[] points){
+
+
+		this.points = points;
 	}
 
 
