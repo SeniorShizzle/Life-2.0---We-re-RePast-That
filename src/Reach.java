@@ -13,7 +13,9 @@ public class Reach {
 	private int nextID;
 
 
-	private PointData[] points;
+
+
+    private PointData[] points;
 
 	public Reach(int reachID, double sourceX, double sourceY, double sinkX,
 			double sinkY, int nextID) {
@@ -27,9 +29,9 @@ public class Reach {
 		this.nextID = nextID;
 	}
 
-	public Reach(PointData[] points){
+	public Reach(PointData[] points, int reachID){
 
-
+        this.reachID = reachID;
 		this.points = points;
 	}
 
@@ -89,5 +91,9 @@ public class Reach {
 	public void setNextID(int nextID) {
 		this.nextID = nextID;
 	}
+
+    public PointData[] getPoints() {
+        return points;
+    }
 
 }

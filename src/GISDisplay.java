@@ -11,10 +11,8 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
+
 
 public class GISDisplay {
 
@@ -31,6 +29,7 @@ public class GISDisplay {
     /** The map file to parse */
     private File mapFile;
 
+    /** The singleton instance. Accessed through {@code GISDisplay.getInstance()} */
     private static GISDisplay instance;
 
     /** TRUE if the map data has been parsed */
@@ -46,51 +45,15 @@ public class GISDisplay {
     /**
      * Singleton GISDisplay should be accessed by calling {@code GISDisplay.getInstance()}
      */
-    @Deprecated
     private GISDisplay(){
         // Private for singletondom
     }
 
-    public void parseMapFile(File file) {
-        try {
-            Scanner scanner = new Scanner(file);
-            if (scanner.hasNextLine()) scanner.nextLine(); // the first line is header information
+    public void parseMapFile(File file) throws Exception {
 
-            while (scanner.hasNextLine()){
-                String line = scanner.nextLine();
-                String[] vals = line.replace(" ", "").split(","); // clear whitespace
-                if (vals.length != 6) continue; // improperly formatted line
+        this.mapFile = file;
 
-                int id         = Integer.parseInt(vals[0]);
-                double sourceX = Double.parseDouble(vals[1]);
-                double sourceY = Double.parseDouble(vals[2]);
-                double sinkX   = Double.parseDouble(vals[3]);
-                double sinkY   = Double.parseDouble(vals[4]);
-                int nextID     = Integer.parseInt(vals[5]);
-
-
-                reaches.add(new Reach(id, sourceX, sourceY, sinkX, sinkY, nextID));
-            }
-
-            hasParsedMapData = true;
-
-        } catch (Exception e){
-
-            System.out.println(e);
-            hasParsedMapData = false;
-        }
-        finally {
-            setBounds();
-            sortReaches();
-
-            try {brokenMethod();} catch (Exception e){}
-        }
-
-
-    }
-
-    private void brokenMethod() throws Exception{
-        FileInputStream is = new FileInputStream("./data/reaches_edt.shp");
+        FileInputStream is = new FileInputStream(file);
         ShapeFileReader r = new ShapeFileReader(is);
 
         ShapeFileHeader h = r.getHeader();
@@ -103,9 +66,12 @@ public class GISDisplay {
         this.maxX = h.getBoxMaxX();
         this.maxY = h.getBoxMaxY();
 
+
         int total = 0;
-        AbstractShape s;
+        AbstractShape s; // this will be reused to create each item
         while ((s = r.next()) != null) {
+
+            s.getHeader().getRecordNumber();
 
             switch (s.getShapeType()) {
                 case POINT:
@@ -132,15 +98,15 @@ public class GISDisplay {
                 //// OUR PRIMARY CASE - Build the Reach objects here
                 case POLYLINE:
                     PolylineShape aPolyline = (PolylineShape) s;
-                    // System.out.println("I read a Polyline with " + aPolyline.getNumberOfParts() + " parts and "  + aPolyline.getNumberOfPoints() + " points");
                     for (int i = 0; i < aPolyline.getNumberOfParts(); i++) {
-
                         // Create each polyline
-                        PointData[] points = aPolyline.getPointsOfPart(i);
+                        // PointData[] points = aPolyline.getPointsOfPart(i);
+                        reaches.add(new Reach(aPolyline.getPointsOfPart(i), s.getHeader().getRecordNumber()));
 
                         // System.out.println("- part " + i + " has " + points.length + " points.");
                     }
                     break;
+
                 default:
                     System.out.println("Read other type of shape.");
             }
@@ -149,7 +115,9 @@ public class GISDisplay {
 
         System.out.println("Total shapes read: " + total);
 
-        is.close();
+        hasParsedMapData = true;
+
+        is.close(); // close the input stream
     }
 
     /**
@@ -173,47 +141,7 @@ public class GISDisplay {
 
     }
 
-    /** Sets the bounds by iterating over the reach objects. Deprecated if using ArcMap GIS data */
-    @Deprecated
-    private void setBounds(){
-        for (Reach reach : reaches){
-            if (reach.sourceX < minX){
-                minX = (int)reach.sourceX;
-                continue;
-            }
-            if (reach.sourceX > maxX){
-                maxX = (int)reach.sourceX;
-                continue;
-            }
-            if (reach.sourceY < minY){
-                minY = (int)reach.sourceY;
-                continue;
-            }
-            if (reach.sourceY > maxY){
-                maxY = (int)reach.sourceY;
-                continue;
-            }
 
-
-            if (reach.sinkX < minX) {
-                minX = (int)reach.sinkX;
-                continue;
-            }
-            if (reach.sinkX > maxX) {
-                maxX = (int)reach.sinkX;
-                continue;
-            }
-            if (reach.sinkY < minY) {
-                minY = (int)reach.sinkY;
-                continue;
-            }
-            if (reach.sinkY > maxY) {
-                maxY = (int)reach.sinkY;
-            }
-        }
-
-        // the boundaries should be set now
-    }
 
 
     public BufferedImage getMapImage(){
@@ -235,10 +163,29 @@ public class GISDisplay {
         // Draw the line data to the graphics context
         for (Reach reach : reaches) {
             // TODO: Normalize the coordinates to the windowspace and manage conversion to integers
-            g2d.drawLine((int) reach.sourceX * 100, (int) reach.sourceY * 100, (int) reach.sinkX * 100, (int) reach.sinkY * 100);
+            PointData[] points = reach.getPoints();
+
+            for (int i = 0; i < points.length - 1; i++) {
+                PointData point = points[i];
+                PointData nextPoint = points[i+1];
+
+                // Draw a line for each segment of the polyline
+                g2d.drawLine(x(point.getX()), y(point.getY()), x(nextPoint.getX()), y(nextPoint.getY()));
+
+            }
+            //g2d.drawLine((int) reach.sourceX * 100, (int) reach.sourceY * 100, (int) reach.sinkX * 100, (int) reach.sinkY * 100);
         }
 
         return cachedMapData;
+    }
+
+    private int x(double x){
+        return (int) ((x - minX) * (Life.WINDOW_WIDTH / (maxX - minX)));
+
+    }
+
+    private int y(double y){
+        return (int) (Life.WINDOW_HEIGHT - (y - minY) * (Life.WINDOW_HEIGHT / (maxY - minY)));
     }
 
 
