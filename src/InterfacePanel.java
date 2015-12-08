@@ -1,6 +1,5 @@
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import javax.swing.tree.ExpandVetoException;
 
 import java.awt.*;
 import java.awt.event.ActionListener;
@@ -182,7 +181,7 @@ public class InterfacePanel extends JPanel {
 
 
         String[] fishStages = FishLifeState.strings();
-        JComboBox<String> fishStagesListDropDown = new JComboBox<String>(fishStages);
+        JComboBox<String> fishStagesListDropDown = new JComboBox<>(fishStages);
         fishStagesListDropDown.setEditable(true);
         fishStagesListDropDown.setSelectedIndex(0);
         fishStagesListDropDown.setMaximumSize(new Dimension(300, 30));
@@ -236,7 +235,7 @@ public class InterfacePanel extends JPanel {
         add(spawnCountPanel);
 
         // Sincerest apologies to Jessie Jackson
-        //RSApplication.getRSApplicationInstance().addCustomUserPanel(this);
+        // RSApplication.getRSApplicationInstance().addCustomUserPanel(this);
 
         hasCreatedUserPanel = true;
 
@@ -265,7 +264,6 @@ public class InterfacePanel extends JPanel {
         }
     }
 
-
    /**
     * The number of agents specified by the user. Defaults to 500
     */
@@ -273,7 +271,6 @@ public class InterfacePanel extends JPanel {
         return this.numberOfAgents;
 
     }
-
 
     /**
      * Returns a File object of the transition table, hopefully in CSV, but no guarantees.

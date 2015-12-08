@@ -44,6 +44,16 @@ public class Reach {
 		this.points = points;
 	}
 
+	/** Returns the first point in the reach object */
+	public PointData getSource(){
+		return this.points[0];
+	}
+
+	/** Returns the last point in the reach object */
+	public PointData getSink(){
+		return this.points[points.length - 1];
+	}
+
 
 
 	public double getSourceX() {
