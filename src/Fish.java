@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Fish{
 	
-	private int ID;
+	private int ID = 0;
 	private double birthday;
 	private double age; 
 	private FishLifeState currentState;
@@ -11,8 +11,8 @@ public class Fish{
 	private double y;
 	private double[] position = new double [2];
 	private ArrayList<Rule> rules;
-	private final int fishID;
-	ID = 0;
+	private int fishID;
+	private long currentTick;
 
 	public Fish(ArrayList<Rule> ruleTable){
 		this.age = 0.0;
@@ -23,7 +23,7 @@ public class Fish{
 		ID++;
 	}
 	
-	public int consultLifeTable(ArrayList<Rule> rules){
+	public void consultLifeTable(ArrayList<Rule> rules){
 		int state = 0; double rand;
 		int currentState = FishLifeState.valueOf(this.getState().toString()).ordinal(); //returns the fish's state as int
 		double currentAge = getAge(); 
@@ -42,24 +42,36 @@ public class Fish{
 				}
 			}
 		}
-		return state;
 	}
 	
-	public void setLifeState(FishLifeState.values() state){
+	public void update(Long tick){
+		setTick(tick);
+		consultLifeTable(this.rules);
+	}
+	
+	private void setTick(Long tick) {
+		this.currentTick = tick;	
+	}
+
+	public void setLifeState(FishLifeState state) {
 		this.currentState = state;
+	}
+	
+	public FishLifeState getState() {
+		return currentState;
+	}
+
+	private double getAge() {
+		
+		return this.currentTick - this.birthday;
 	}
 	
 	public String[] getCSVInfo(){
     	
-    	String tick = Double.toString(RepastEssentials.GetTickCount());
+//    	String tick = Double.toString(RepastEssentials.GetTickCount());
+		String tick = Long.toString(this.currentTick);
 		String id = Integer.toString(this.ID);
-//		String age;
-//		if(RepastEssentials.GetTickCount() - this.birthday > 0){
-		String age = (RepastEssentials.GetTickCount() - this.birthday > 0) ? Double.toString(RepastEssentials.GetTickCount() - this.birthday) :"0";
-//		}
-//		else{
-//			age = Double.toString(0.0);
-//		}
+		String age = Double.toString(getAge());
 		String state = FishLifeState.valueOf(this.getState().toString()).toString();
 		String location = "null";
 		String distanceToOrigin = "null";
