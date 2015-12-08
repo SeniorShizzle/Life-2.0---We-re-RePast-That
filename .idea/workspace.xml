@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4800189-6fa1-4892-8868-dba6eb218596" name="Default" comment="Merged Master to GIS_Parsing">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GISDisplay.java" afterPath="$PROJECT_DIR$/src/GISDisplay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InterfacePanel.java" afterPath="$PROJECT_DIR$/src/InterfacePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Reach.java" afterPath="$PROJECT_DIR$/src/Reach.java" />
+    <list default="true" id="c4800189-6fa1-4892-8868-dba6eb218596" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Life 2.0 - We're RePast That.iws" />
@@ -54,8 +51,8 @@
       <file leaf-file-name="GISDisplay.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GISDisplay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27662957">
-              <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.600939">
+              <caret line="189" column="0" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
               <folding>
                 <element signature="docComment;method#linkReaches#0;class#GISDisplay#0" expanded="true" />
                 <element signature="docComment;method#x#0;class#GISDisplay#0" expanded="true" />
@@ -124,17 +121,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding>
-                <element signature="docComment;field#nextReaches#0;class#Reach#0" expanded="true" />
-                <element signature="docComment;field#points#0;class#Reach#0" expanded="true" />
-                <element signature="docComment;method#Reach#1;class#Reach#0" expanded="true" />
-                <element signature="docComment;method#getSource#0;class#Reach#0" expanded="true" />
-                <element signature="docComment;method#getSink#0;class#Reach#0" expanded="true" />
-                <element signature="e#2327#2328#0" expanded="true" />
-                <element signature="e#2361#2362#0" expanded="true" />
-                <element signature="e#2405#2406#0" expanded="true" />
-                <element signature="e#2448#2449#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -152,7 +139,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="GIS_Parsing" />
       </map>
     </option>
   </component>
@@ -592,7 +579,7 @@
       <workItem from="1449368754464" duration="11000" />
       <workItem from="1449607243527" duration="1929000" />
       <workItem from="1449609577087" duration="1445000" />
-      <workItem from="1449611190995" duration="1556000" />
+      <workItem from="1449611190995" duration="1692000" />
     </task>
     <task id="LOCAL-00001" summary="First class">
       <created>1449008796735</created>
@@ -756,15 +743,21 @@
       <option name="project" value="LOCAL" />
       <updated>1449611950204</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Connect reaches; gave them children. Sorry reaches. &#10;&#10;Also instantiated public class Wellfare implementing public interface ChildSupport">
+      <created>1449612785181</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1449612785181</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30567000" />
+    <option name="totallyTimeSpent" value="30703000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -777,14 +770,14 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39901477" sideWeight="0.4977834" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39901477" sideWeight="0.5022166" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31938776" sideWeight="0.4977834" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31938776" sideWeight="0.4977834" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881773" sideWeight="0.4977834" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.10989011" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18742369" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32959184" sideWeight="0.4977834" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959184" sideWeight="0.4977834" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -806,7 +799,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="First class" />
     <MESSAGE value="Created my first window :')&#10;&#10;To run this, the entry point is in the class Life" />
     <MESSAGE value="Runtime loop" />
     <MESSAGE value="Refactored to remove runtime loop from main window. Created new class 'SimulationDisplay' which controls the main runloop and display. Test line implemented to evaulate drawing." />
@@ -831,7 +823,8 @@
     <MESSAGE value="GIS shape files now display in the map simulator!" />
     <MESSAGE value="Merged Master to GIS_Parsing" />
     <MESSAGE value="A FILE (*shhhh*)" />
-    <option name="LAST_COMMIT_MESSAGE" value="A FILE (*shhhh*)" />
+    <MESSAGE value="Connect reaches; gave them children. Sorry reaches. &#10;&#10;Also instantiated public class Wellfare implementing public interface ChildSupport" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connect reaches; gave them children. Sorry reaches. &#10;&#10;Also instantiated public class Wellfare implementing public interface ChildSupport" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -864,17 +857,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;field#nextReaches#0;class#Reach#0" expanded="true" />
-            <element signature="docComment;field#points#0;class#Reach#0" expanded="true" />
-            <element signature="docComment;method#Reach#1;class#Reach#0" expanded="true" />
-            <element signature="docComment;method#getSource#0;class#Reach#0" expanded="true" />
-            <element signature="docComment;method#getSink#0;class#Reach#0" expanded="true" />
-            <element signature="e#2327#2328#0" expanded="true" />
-            <element signature="e#2361#2362#0" expanded="true" />
-            <element signature="e#2405#2406#0" expanded="true" />
-            <element signature="e#2448#2449#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -949,17 +932,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;field#nextReaches#0;class#Reach#0" expanded="true" />
-            <element signature="docComment;field#points#0;class#Reach#0" expanded="true" />
-            <element signature="docComment;method#Reach#1;class#Reach#0" expanded="true" />
-            <element signature="docComment;method#getSource#0;class#Reach#0" expanded="true" />
-            <element signature="docComment;method#getSink#0;class#Reach#0" expanded="true" />
-            <element signature="e#2327#2328#0" expanded="true" />
-            <element signature="e#2361#2362#0" expanded="true" />
-            <element signature="e#2405#2406#0" expanded="true" />
-            <element signature="e#2448#2449#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1034,17 +1007,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
-          <folding>
-            <element signature="docComment;field#nextReaches#0;class#Reach#0" expanded="true" />
-            <element signature="docComment;field#points#0;class#Reach#0" expanded="true" />
-            <element signature="docComment;method#Reach#1;class#Reach#0" expanded="true" />
-            <element signature="docComment;method#getSource#0;class#Reach#0" expanded="true" />
-            <element signature="docComment;method#getSink#0;class#Reach#0" expanded="true" />
-            <element signature="e#2327#2328#0" expanded="true" />
-            <element signature="e#2361#2362#0" expanded="true" />
-            <element signature="e#2405#2406#0" expanded="true" />
-            <element signature="e#2448#2449#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1111,17 +1074,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
-          <folding>
-            <element signature="docComment;field#nextReaches#0;class#Reach#0" expanded="true" />
-            <element signature="docComment;field#points#0;class#Reach#0" expanded="true" />
-            <element signature="docComment;method#Reach#1;class#Reach#0" expanded="true" />
-            <element signature="docComment;method#getSource#0;class#Reach#0" expanded="true" />
-            <element signature="docComment;method#getSink#0;class#Reach#0" expanded="true" />
-            <element signature="e#2327#2328#0" expanded="true" />
-            <element signature="e#2361#2362#0" expanded="true" />
-            <element signature="e#2405#2406#0" expanded="true" />
-            <element signature="e#2448#2449#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1188,17 +1141,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
-          <folding>
-            <element signature="docComment;field#nextReaches#0;class#Reach#0" expanded="true" />
-            <element signature="docComment;field#points#0;class#Reach#0" expanded="true" />
-            <element signature="docComment;method#Reach#1;class#Reach#0" expanded="true" />
-            <element signature="docComment;method#getSource#0;class#Reach#0" expanded="true" />
-            <element signature="docComment;method#getSink#0;class#Reach#0" expanded="true" />
-            <element signature="e#2327#2328#0" expanded="true" />
-            <element signature="e#2361#2362#0" expanded="true" />
-            <element signature="e#2405#2406#0" expanded="true" />
-            <element signature="e#2448#2449#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1220,14 +1163,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.116054155">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1332,17 +1267,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;field#nextReaches#0;class#Reach#0" expanded="true" />
-            <element signature="docComment;field#points#0;class#Reach#0" expanded="true" />
-            <element signature="docComment;method#Reach#1;class#Reach#0" expanded="true" />
-            <element signature="docComment;method#getSource#0;class#Reach#0" expanded="true" />
-            <element signature="docComment;method#getSink#0;class#Reach#0" expanded="true" />
-            <element signature="e#2327#2328#0" expanded="true" />
-            <element signature="e#2361#2362#0" expanded="true" />
-            <element signature="e#2405#2406#0" expanded="true" />
-            <element signature="e#2448#2449#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1367,10 +1292,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11605723">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GISDisplay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27662957">
-          <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.600939">
+          <caret line="189" column="0" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
           <folding>
             <element signature="docComment;method#linkReaches#0;class#GISDisplay#0" expanded="true" />
             <element signature="docComment;method#x#0;class#GISDisplay#0" expanded="true" />
