@@ -85,7 +85,8 @@ public class InterfacePanel extends JPanel {
                 try {
                     mapDisplay.parseMapFile(mapFile);
                 } catch (Exception e){
-                    System.out.println(e.getMessage());
+                    System.out.println(e);
+                    e.printStackTrace();
                 }
 
                 try { // Adding the checkboxes and reach lists

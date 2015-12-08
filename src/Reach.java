@@ -16,7 +16,7 @@ public class Reach {
 	private int nextID;
 
     /** An ArrayList of reaches that come after this one. Wow reaches */
-    private ArrayList<Reach> nextReaches;
+    private ArrayList<Reach> nextReaches = new ArrayList<>();
 
 
 	/** A primitive array of PointData objects representing GIS data points as a polyline */
@@ -46,7 +46,7 @@ public class Reach {
 	public Reach(PointData[] points, int reachID){
         this.reachID = reachID;
 		this.points = points;
-	}
+    }
 
 	/** Returns the first point in the reach object */
 	public PointData getSource(){
@@ -114,7 +114,7 @@ public class Reach {
     public ArrayList<Reach> getNextReaches() {
         return nextReaches;
     }
-    
+
     public void addNextReach(Reach reach){
         this.nextReaches.add(reach);
     }

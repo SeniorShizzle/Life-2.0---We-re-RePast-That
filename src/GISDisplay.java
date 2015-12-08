@@ -120,31 +120,52 @@ public class GISDisplay {
 
         System.out.println("Total shapes read: " + total);
 
+        linkReaches(); // Link the reaches to eachother
+
         hasParsedMapData = true;
 
         is.close(); // close the input stream
     }
 
+
     /**
-     * assumptions: no forks towards the ocean, lines have consistent source to
-     * sink order, they intersect, ignores ocean
+     * Links the reach objects by connecting reaches who's source is the same as another reach's sink.
      */
-    private void sortReaches() {
-        //TODO: Correct this method for using the new Reaches GIS style
-         double x, y;
-         for (int i = 0; i < reaches.size(); i++) {
-            x = reaches.get(i).getSinkX();
-            y = reaches.get(i).getSinkY();
-             for (Reach reache : reaches) {
-                 if (reache.getSourceX() == x && reache.getSourceY() == y) {
-                     reaches.get(i).setNextID(reache.getReachID());
+    private void linkReaches(){
+        /*
+        Dear Compiler,
 
-                 }
+        I have no idea how to do this.
+        Please figure this out for me?
+        I would be most grateful.
+        To help you out, I will now write a haiku:
 
-             }
+               Forever flowing
+        Streams filled with many fishes
+           How will they find home?
+
+         */
+
+        int matchedReaches = 0;
+        for (Reach reach : reaches) {
+            // We're visiting each reach!
+            // Visit each other reach.
+            // If the reach has a next, find it and set it.
+            for (Reach otherReach : reaches){
+                if (otherReach == reach) continue; // don't add ourselves, dummy
+
+                if (reach.getSink().getX() == otherReach.getSource().getX() &&
+                        reach.getSink().getY() == otherReach.getSource().getY()) {
+                    reach.addNextReach(otherReach);
+                    //System.out.println("Reach " + reach + " is connecting to " + otherReach + ". Wow.");
+                    matchedReaches++;
+                }
+            }
+           // System.out.println("Reach " + reach + " has " + reach.getNextReaches().size() + " child reaches");
 
         }
 
+        System.out.println(matchedReaches + " connected.");
     }
 
 
