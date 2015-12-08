@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+import org.nocrala.tools.gis.data.esri.shapefile.shape.PointData;
+
 
 public class Fish{
 	
@@ -13,12 +15,16 @@ public class Fish{
 	private ArrayList<Rule> rules;
 	private int fishID;
 	private long currentTick;
+	private Reach currentReach;
+	private int counter = 0;
 
-	public Fish(ArrayList<Rule> ruleTable){
+	public Fish(ArrayList<Rule> ruleTable, Reach initialReach){
 		this.age = 0.0;
 //		this.birthday = currentTick;
 		this.currentState = FishLifeState.EGG_INCUBATION;
 		this.rules = ruleTable;
+		this.currentReach = initialReach;
+		setPosition(this.currentReach, 0);
 		this.fishID = ID;
 		ID++;
 	}
@@ -42,6 +48,8 @@ public class Fish{
 				}
 			}
 		}
+		counter++;
+		setPosition(this.currentReach, counter);
 	}
 	
 	public void update(Long tick){
@@ -53,17 +61,38 @@ public class Fish{
 		this.currentTick = tick;	
 	}
 
-	public void setLifeState(FishLifeState state) {
+	private void setLifeState(FishLifeState state) {
 		this.currentState = state;
 	}
 	
-	public FishLifeState getState() {
+	private FishLifeState getState() {
 		return currentState;
 	}
 
 	private double getAge() {
-		
 		return this.currentTick - this.birthday;
+	}
+	
+	private void setPosition(Reach currentReach, int counter){
+		PointData[] reachPoints = new PointData[(int) currentReach.length];
+		
+		reachPoints = currentReach.getPoints();
+		
+		if(counter < reachPoints.length){
+		this.x = reachPoints[counter].getX();
+		this.y = reachPoints[counter].getY();
+		this.position[0] = this.x;
+		this.position[1] = this.y;
+		System.out.println("x : " + this.x + ", y : " + this.y);
+		return;
+		}
+		
+		else{
+			counter = 0;
+			Reach newReach = currentReach;
+			//newReach will = currentReach.nextReach();
+			setPosition(newReach, counter);
+		}
 	}
 	
 	public String[] getCSVInfo(){
