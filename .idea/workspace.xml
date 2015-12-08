@@ -1,8 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4800189-6fa1-4892-8868-dba6eb218596" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GISDisplay.java" afterPath="$PROJECT_DIR$/src/GISDisplay.java" />
+    <list default="true" id="c4800189-6fa1-4892-8868-dba6eb218596" name="Default" comment="Fixes">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/resources/inherit.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/lib/shapefilereader-1.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/AbstractMultiPointShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/AbstractMultiPointShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/AbstractPointShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/AbstractPointShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/AbstractPolyMShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/AbstractPolyMShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/AbstractPolyPlainShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/AbstractPolyPlainShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/AbstractPolyShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/AbstractPolyShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/AbstractPolyZShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/AbstractPolyZShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/AbstractShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/class-use/AbstractShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/BAUtil.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/class-use/BAUtil.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/examples/example/BigFileExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/Const.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/class-use/Const.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/exception/DataStreamEOFException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/exception/class-use/DataStreamEOFException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/DoubleSerializer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/class-use/DoubleSerializer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/HexaUtil.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/class-use/HexaUtil.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/ISUtil.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/class-use/ISUtil.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/IntSerializer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/class-use/IntSerializer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/exception/InvalidShapeFileException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/exception/class-use/InvalidShapeFileException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/MultiPatchShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/MultiPatchShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/MultiPointMShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/MultiPointMShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/MultiPointPlainShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/MultiPointPlainShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/MultiPointZShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/MultiPointZShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/NullShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/NullShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/PartType.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/class-use/PartType.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/PointData.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/class-use/PointData.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/PointMShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/PointMShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/PointShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/PointShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/PointZShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/PointZShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/PolygonMShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/PolygonMShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/PolygonShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/PolygonShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/PolygonZShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/PolygonZShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/PolylineMShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/PolylineMShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/PolylineShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/PolylineShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/PolylineZShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/class-use/PolylineZShape.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/header/ShapeFileHeader.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/header/class-use/ShapeFileHeader.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/ShapeFileReader.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/class-use/ShapeFileReader.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/ShapeHeader.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/class-use/ShapeHeader.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/ShapeType.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/class-use/ShapeType.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/examples/example/SimpleExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/ValidationPreferences.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/class-use/ValidationPreferences.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/allclasses-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/allclasses-noframe.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/constant-values.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/deprecated-list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/help-doc.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/index-all.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/overview-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/overview-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/overview-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/exception/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/header/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/package-list" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/exception/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/header/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/package-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/exception/package-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/header/package-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/package-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/package-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/package-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/package-use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/exception/package-use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/header/package-use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/package-use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/shape/shapes/package-use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/org/nocrala/tools/gis/data/esri/shapefile/util/package-use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/serialized-form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/shapefilereader-1/docs/stylesheet.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Life 2.0 - We're RePast That.iws" />
@@ -26,134 +138,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Life.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Life.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="19" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="19" />
-              <folding>
-                <element signature="e#316#317#0" expanded="true" />
-                <element signature="e#348#349#0" expanded="true" />
-                <element signature="docComment;method#run#0;class#Life#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimulationDisplay.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SimulationDisplay.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="80" column="47" selection-start-line="80" selection-start-column="47" selection-end-line="80" selection-end-column="47" />
-              <folding>
-                <element signature="docComment;field#tickCount#0;class#SimulationDisplay#0" expanded="true" />
-                <element signature="docComment;field#parent#0;class#SimulationDisplay#0" expanded="true" />
-                <element signature="docComment;field#ball#0;class#SimulationDisplay#0" expanded="true" />
-                <element signature="docComment;field#gisDisplay#0;class#SimulationDisplay#0" expanded="true" />
-                <element signature="docComment;field#interfacePanel#0;class#SimulationDisplay#0" expanded="true" />
-                <element signature="docComment;method#run#0;class#SimulationDisplay#0" expanded="true" />
-                <element signature="docComment;method#getTickCount#0;class#SimulationDisplay#0" expanded="true" />
-                <element signature="docComment;method#updateModel#0;class#SimulationDisplay#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InterfacePanelDelegate.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/InterfacePanelDelegate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="39" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GISDisplay.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/GISDisplay.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.58064514">
-              <caret line="71" column="26" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
-              <folding>
-                <element signature="docComment;field#mapFile#0;class#GISDisplay#0" expanded="true" />
-                <element signature="docComment;field#hasParsedMapData#0;class#GISDisplay#0" expanded="true" />
-                <element signature="docComment;method#GISDisplay#0;class#GISDisplay#0" expanded="true" />
-                <element signature="docComment;method#sortReaches#0;class#GISDisplay#0" expanded="true" />
-                <element signature="e#4971#4972#0" expanded="true" />
-                <element signature="e#5006#5007#0" expanded="true" />
-                <element signature="e#5035#5036#0" expanded="true" />
-                <element signature="e#5062#5063#0" expanded="true" />
-                <element signature="e#5090#5091#0" expanded="true" />
-                <element signature="e#5117#5118#0" expanded="true" />
-                <element signature="e#5145#5146#0" expanded="true" />
-                <element signature="e#5172#5173#0" expanded="true" />
-                <element signature="e#5200#5201#0" expanded="true" />
-                <element signature="e#5227#5228#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ball.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Ball.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="minimap.csv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/minimap.csv">
           <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state vertical-scroll-proportion="-2.0689654">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InterfacePanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/InterfacePanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.185184">
-              <caret line="215" column="13" selection-start-line="215" selection-start-column="13" selection-end-line="215" selection-end-column="13" />
-              <folding>
-                <element signature="docComment;field#delegates#0;class#InterfacePanel#0" expanded="true" />
-                <element signature="docComment;field#mapFile#0;class#InterfacePanel#0" expanded="true" />
-                <element signature="docComment;field#numberOfAgents#0;class#InterfacePanel#0" expanded="true" />
-                <element signature="docComment;method#ReachBoxes#0;class#InterfacePanel#0" expanded="true" />
-                <element signature="docComment;method#getNumberOfAgents#0;class#InterfacePanel#0" expanded="true" />
-                <element signature="docComment;method#getTransitionTable#0;class#InterfacePanel#0" expanded="true" />
-                <element signature="e#10647#10648#0" expanded="true" />
-                <element signature="e#10685#10686#0" expanded="true" />
-                <element signature="docComment;method#registerDelegate#0;class#InterfacePanel#0" expanded="true" />
-                <element signature="e#10810#10811#0" expanded="true" />
-                <element signature="e#10854#10855#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FishLifeState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FishLifeState.java">
+      <file leaf-file-name="FishBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FishBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <caret line="61" column="8" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Reach.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Reach.java">
+      <file leaf-file-name="Bag.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Bag.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+              <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.116054155">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -183,13 +205,15 @@
         <option value="$PROJECT_DIR$/src/Reach.java" />
         <option value="$PROJECT_DIR$/src/Ball.java" />
         <option value="$PROJECT_DIR$/src/Life.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/FishLifeState.java" />
         <option value="$PROJECT_DIR$/src/GISDisplayDelegate.java" />
         <option value="$PROJECT_DIR$/src/InterfacePanelDelegate.java" />
         <option value="$PROJECT_DIR$/src/InterfacePanel.java" />
         <option value="$PROJECT_DIR$/src/SimulationDisplay.java" />
         <option value="$PROJECT_DIR$/src/GISDisplay.java" />
+        <option value="$PROJECT_DIR$/src/FishBuilder.java" />
+        <option value="$PROJECT_DIR$/src/Bag.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -201,8 +225,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="36" />
-    <option name="y" value="51" />
+    <option name="x" value="77" />
+    <option name="y" value="25" />
     <option name="width" value="1621" />
     <option name="height" value="904" />
   </component>
@@ -274,7 +298,43 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
+              <option name="myItemId" value="shapefilereader-1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shapefilereader-1.0.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Life 2.0 - We're RePast That" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecondLife" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shapefilereader-1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Life 2.0 - We're RePast That" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SecondLife" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -291,15 +351,15 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/opencsv-3.6.jar!/" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
@@ -308,6 +368,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/data" />
     </key>
   </component>
@@ -609,6 +670,7 @@
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="JAR_PATH" value="$PROJECT_DIR$/shapefilereader-1/lib/shapefilereader-1.0.jar" />
       <envs />
       <method />
     </configuration>
@@ -720,7 +782,7 @@
       <updated>1449008489139</updated>
       <workItem from="1449008490474" duration="12813000" />
       <workItem from="1449173730906" duration="344000" />
-      <workItem from="1449175141788" duration="6221000" />
+      <workItem from="1449175141788" duration="7992000" />
     </task>
     <task id="LOCAL-00001" summary="First class">
       <created>1449008796735</created>
@@ -824,15 +886,45 @@
       <option name="project" value="LOCAL" />
       <updated>1449183705794</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="what">
+      <created>1449183849276</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1449183849276</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Reading the GIS File">
+      <created>1449185343624</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1449185343624</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Reading the GIS File">
+      <created>1449185445107</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1449185445107</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Fixes">
+      <created>1449185825951</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1449185825951</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Updated ignore">
+      <created>1449186231843</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1449186231843</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19378000" />
+    <option name="totallyTimeSpent" value="21149000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="36" y="51" width="1621" height="904" extended-state="0" />
-    <editor active="true" />
+    <frame x="77" y="25" width="1621" height="904" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -845,13 +937,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881773" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881773" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32881773" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24952501" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24952501" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20197044" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24952501" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20197044" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -887,7 +979,12 @@
     <MESSAGE value="fish" />
     <MESSAGE value="images" />
     <MESSAGE value="thanks Alex" />
-    <option name="LAST_COMMIT_MESSAGE" value="thanks Alex" />
+    <MESSAGE value="what" />
+    <MESSAGE value="added ESRI shape file libraries" />
+    <MESSAGE value="Reading the GIS File" />
+    <MESSAGE value="Fixes" />
+    <MESSAGE value="Updated ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated ignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -898,62 +995,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Life.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="docComment;method#run#0;class#Life#0" expanded="true" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/data/minimap.csv">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SimulationDisplay.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-          <folding>
-            <element signature="docComment;field#tickCount#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;field#parent#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;field#ball#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;field#gisDisplay#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;field#interfacePanel#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;method#run#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;method#getTickCount#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;method#updateModel#0;class#SimulationDisplay#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GISDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="43" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
-          <folding>
-            <element signature="docComment;field#mapFile#0;class#GISDisplay#0" expanded="true" />
-            <element signature="docComment;field#hasParsedMapData#0;class#GISDisplay#0" expanded="true" />
-            <element signature="docComment;method#GISDisplay#0;class#GISDisplay#0" expanded="true" />
-            <element signature="docComment;method#sortReaches#0;class#GISDisplay#0" expanded="true" />
-            <element signature="e#4971#4972#0" expanded="true" />
-            <element signature="e#5006#5007#0" expanded="true" />
-            <element signature="e#5035#5036#0" expanded="true" />
-            <element signature="e#5062#5063#0" expanded="true" />
-            <element signature="e#5090#5091#0" expanded="true" />
-            <element signature="e#5117#5118#0" expanded="true" />
-            <element signature="e#5145#5146#0" expanded="true" />
-            <element signature="e#5172#5173#0" expanded="true" />
-            <element signature="e#5200#5201#0" expanded="true" />
-            <element signature="e#5227#5228#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ball.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <caret line="0" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -969,213 +1017,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Reach.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Life.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
-          <folding>
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="docComment;method#run#0;class#Life#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SimulationDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-          <folding>
-            <element signature="docComment;field#tickCount#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;field#parent#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;field#ball#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;field#gisDisplay#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;field#interfacePanel#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;method#run#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;method#getTickCount#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;method#updateModel#0;class#SimulationDisplay#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GISDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="43" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
-          <folding>
-            <element signature="docComment;field#mapFile#0;class#GISDisplay#0" expanded="true" />
-            <element signature="docComment;field#hasParsedMapData#0;class#GISDisplay#0" expanded="true" />
-            <element signature="docComment;method#GISDisplay#0;class#GISDisplay#0" expanded="true" />
-            <element signature="docComment;method#sortReaches#0;class#GISDisplay#0" expanded="true" />
-            <element signature="e#4971#4972#0" expanded="true" />
-            <element signature="e#5006#5007#0" expanded="true" />
-            <element signature="e#5035#5036#0" expanded="true" />
-            <element signature="e#5062#5063#0" expanded="true" />
-            <element signature="e#5090#5091#0" expanded="true" />
-            <element signature="e#5117#5118#0" expanded="true" />
-            <element signature="e#5145#5146#0" expanded="true" />
-            <element signature="e#5172#5173#0" expanded="true" />
-            <element signature="e#5200#5201#0" expanded="true" />
-            <element signature="e#5227#5228#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ball.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/minimap.csv">
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state vertical-scroll-proportion="-2.0689654">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Reach.java">
+    <entry file="file://$PROJECT_DIR$/src/FishBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <caret line="61" column="8" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.024193548">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.116054155">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FishLifeState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Life.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="19" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="19" />
-          <folding>
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="docComment;method#run#0;class#Life#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Reach.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InterfacePanelDelegate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="39" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InterfacePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.185184">
-          <caret line="215" column="13" selection-start-line="215" selection-start-column="13" selection-end-line="215" selection-end-column="13" />
-          <folding>
-            <element signature="docComment;field#delegates#0;class#InterfacePanel#0" expanded="true" />
-            <element signature="docComment;field#mapFile#0;class#InterfacePanel#0" expanded="true" />
-            <element signature="docComment;field#numberOfAgents#0;class#InterfacePanel#0" expanded="true" />
-            <element signature="docComment;method#ReachBoxes#0;class#InterfacePanel#0" expanded="true" />
-            <element signature="docComment;method#getNumberOfAgents#0;class#InterfacePanel#0" expanded="true" />
-            <element signature="docComment;method#getTransitionTable#0;class#InterfacePanel#0" expanded="true" />
-            <element signature="e#10647#10648#0" expanded="true" />
-            <element signature="e#10685#10686#0" expanded="true" />
-            <element signature="docComment;method#registerDelegate#0;class#InterfacePanel#0" expanded="true" />
-            <element signature="e#10810#10811#0" expanded="true" />
-            <element signature="e#10854#10855#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SimulationDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="47" selection-start-line="80" selection-start-column="47" selection-end-line="80" selection-end-column="47" />
-          <folding>
-            <element signature="docComment;field#tickCount#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;field#parent#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;field#ball#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;field#gisDisplay#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;field#interfacePanel#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;method#run#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;method#getTickCount#0;class#SimulationDisplay#0" expanded="true" />
-            <element signature="docComment;method#updateModel#0;class#SimulationDisplay#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/minimap.csv">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ball.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GISDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58064514">
-          <caret line="71" column="26" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
-          <folding>
-            <element signature="docComment;field#mapFile#0;class#GISDisplay#0" expanded="true" />
-            <element signature="docComment;field#hasParsedMapData#0;class#GISDisplay#0" expanded="true" />
-            <element signature="docComment;method#GISDisplay#0;class#GISDisplay#0" expanded="true" />
-            <element signature="docComment;method#sortReaches#0;class#GISDisplay#0" expanded="true" />
-            <element signature="e#4971#4972#0" expanded="true" />
-            <element signature="e#5006#5007#0" expanded="true" />
-            <element signature="e#5035#5036#0" expanded="true" />
-            <element signature="e#5062#5063#0" expanded="true" />
-            <element signature="e#5090#5091#0" expanded="true" />
-            <element signature="e#5117#5118#0" expanded="true" />
-            <element signature="e#5145#5146#0" expanded="true" />
-            <element signature="e#5172#5173#0" expanded="true" />
-            <element signature="e#5200#5201#0" expanded="true" />
-            <element signature="e#5227#5228#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1232,12 +1105,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Life 2.0 - We're RePast That</last-edited>
+          <last-edited>SecondLife</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -1245,6 +1117,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>opencsv-3.6</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

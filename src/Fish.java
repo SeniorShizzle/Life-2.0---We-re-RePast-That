@@ -1,19 +1,32 @@
+import java.util.ArrayList;
 
-public class Fish {
+
+public class Fish{
 	
-	private static double birthday;
-	private static double age; 
-	private static FishLifeState lifeState;
-	private static double x;
-	private static double y;
-	private static double[] position = new double [2];
+	private int ID;
+	private double birthday;
+	private double age; 
+	private FishLifeState currentState;
+	private double x;
+	private double y;
+	private double[] position = new double [2];
+	private ArrayList<Rule> rules;
+	private final int fishID;
+	ID = 0;
 
-	public fish()
+	public Fish(ArrayList<Rule> ruleTable){
+		this.age = 0.0;
+//		this.birthday = currentTick;
+		this.currentState = FishLifeState.EGG_INCUBATION;
+		this.rules = ruleTable;
+		this.fishID = ID;
+		ID++;
+	}
 	
 	public int consultLifeTable(ArrayList<Rule> rules){
 		int state = 0; double rand;
 		int currentState = FishLifeState.valueOf(this.getState().toString()).ordinal(); //returns the fish's state as int
-		double currentAge = this.getBirthday() - RepastEssentials.GetTickCount(); 
+		double currentAge = getAge(); 
 		for (int j = 0; j < rules.size(); j++){
 			rand = Math.random();
 			if (rules.get(j).currentState == currentState && rules.get(j).maxAge > currentAge){
@@ -32,7 +45,11 @@ public class Fish {
 		return state;
 	}
 	
-public String[] getCSVInfo(){
+	public void setLifeState(FishLifeState.values() state){
+		this.currentState = state;
+	}
+	
+	public String[] getCSVInfo(){
     	
     	String tick = Double.toString(RepastEssentials.GetTickCount());
 		String id = Integer.toString(this.ID);

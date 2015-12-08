@@ -28,7 +28,7 @@ public class FishBuilder {
 	FileReader fishStateTransitionTable;
 	List<String[]> allRows;
 	ArrayList<Rule> ruleTable = new ArrayList<Rule>();
-	
+
 	InterfacePanel steveThing = InterfacePanel.getInstance();
 	{
 
@@ -47,13 +47,13 @@ public class FishBuilder {
 		for (String[] row : allRows) {
 //			Logger.log(Level.INFO, row.toString());
 			for (int i = 0; i < row.length; i++) row[i] = row[i].trim();
-			
+
 			int currentState = Integer.parseInt(row[0]);
-			StdOut.println("Current State : " + currentState + "muhfucka");
+			System.out.println("Current State : " + currentState + "muhfucka");
 			double maxAge = Double.parseDouble(row[1]);
 			int targetState = Integer.parseInt(row[2]);
 			double probability = Double.parseDouble(row[3]);
-			
+
 			// check for existing row (matching currentstate and maxage)
 			Rule foundRule = null;
 			for (Rule rule : ruleTable) {
@@ -73,12 +73,12 @@ public class FishBuilder {
 			// insert/update the probability for this target state
 			double[] transitionProbMatrix = foundRule.getTransitionProbMatrix();
 			transitionProbMatrix[targetState] = probability;
-			foundRule.setTransitionProbMatrix(transitionProbMatrix);				
+			foundRule.setTransitionProbMatrix(transitionProbMatrix);
 		}
 	} catch (IOException e) {
 		e.printStackTrace();
 	}
-	
+
 	// Create and display the user interface panel
 	JFrame customInterfacePanel2 = new JFrame("Save Simulation");
     customInterfacePanel2.add(InterfacePanel.getInstance());
@@ -100,7 +100,7 @@ public class FishBuilder {
     		data.add(new String[] {"Current Tick" , "Fish ID", "Age", "State", "Location", "DFO", "DFT", "\n"});
     		//for each fish in the space
     		/*
-    		for(Object obj : context){	
+    		for(Object obj : context){
     		Fish f = (Fish) obj;
     		//interrogates fish for its info
     		data.add(f.getCSVInfo());
@@ -117,8 +117,8 @@ public class FishBuilder {
     customInterfacePanel2.pack();
     customInterfacePanel2.setVisible(true);
 
-	
-	Fish newFish = new Fish(ruleTable);
+
+	//Fish newFish = new Fish(ruleTable);
 
 }
 
