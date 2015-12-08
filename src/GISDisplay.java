@@ -5,34 +5,38 @@ import org.nocrala.tools.gis.data.esri.shapefile.shape.PointData;
 import org.nocrala.tools.gis.data.esri.shapefile.shape.shapes.MultiPointZShape;
 import org.nocrala.tools.gis.data.esri.shapefile.shape.shapes.PointShape;
 import org.nocrala.tools.gis.data.esri.shapefile.shape.shapes.PolygonShape;
+import org.nocrala.tools.gis.data.esri.shapefile.shape.shapes.PolylineShape;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.ArrayList;
-import java.util.Scanner;
+
 
 public class GISDisplay {
 
+    /** The ArrayList of Reach objects represented by our GIS Data */
     private ArrayList<Reach> reaches = new ArrayList<>();
 
+    private double minX;
+    private double minY;
+    private double maxX;
+    private double maxY;
 
-    private int minX;
-    private int minY;
-    private int maxX;
-    private int maxY;
-
+    /** The cached map image to display */
     private BufferedImage cachedMapData;
 
     /** The map file to parse */
     private File mapFile;
 
+    /** The singleton instance. Accessed through {@code GISDisplay.getInstance()} */
     private static GISDisplay instance;
 
     /** TRUE if the map data has been parsed */
     private boolean hasParsedMapData = false;
 
+    /** Returns the shared instance of the GISDisplay class */
     public static GISDisplay getInstance(){
         if (instance == null) instance = new GISDisplay();
 
@@ -43,60 +47,39 @@ public class GISDisplay {
     /**
      * Singleton GISDisplay should be accessed by calling {@code GISDisplay.getInstance()}
      */
-    @Deprecated
     private GISDisplay(){
         // Private for singletondom
     }
 
-    public void parseMapFile(File file) {
-        try {
-            Scanner scanner = new Scanner(file);
-            if (scanner.hasNextLine()) scanner.nextLine(); // the first line is header information
+    /**
+     * Parses the GIS file data from a ".shp" file. Creates Reach objects.
+     *
+     * @param file the File object representing an ArcGIS Shape File
+     * @throws Exception if the file data is corrupt or an improper file format is passed
+     */
+    public void parseMapFile(File file) throws Exception {
 
-            while (scanner.hasNextLine()){
-                String line = scanner.nextLine();
-                String[] vals = line.replace(" ", "").split(","); // clear whitespace
-                if (vals.length != 6) continue; // improperly formatted line
+        this.mapFile = file;
 
-                int id         = Integer.parseInt(vals[0]);
-                double sourceX = Double.parseDouble(vals[1]);
-                double sourceY = Double.parseDouble(vals[2]);
-                double sinkX   = Double.parseDouble(vals[3]);
-                double sinkY   = Double.parseDouble(vals[4]);
-                int nextID     = Integer.parseInt(vals[5]);
-
-
-                reaches.add(new Reach(id, sourceX, sourceY, sinkX, sinkY, nextID));
-            }
-
-            hasParsedMapData = true;
-
-        } catch (Exception e){
-
-            System.out.println(e);
-            hasParsedMapData = false;
-        }
-        finally {
-            setBounds();
-            sortReaches();
-
-            try {brokenMethod();} catch (Exception e){}
-        }
-
-
-    }
-
-    private void brokenMethod() throws Exception{
-        FileInputStream is = new FileInputStream(
-                "./data/reaches_edt.shp");
+        FileInputStream is = new FileInputStream(file);
         ShapeFileReader r = new ShapeFileReader(is);
 
         ShapeFileHeader h = r.getHeader();
         System.out.println("The shape type of this files is " + h.getShapeType());
 
+        // Set the boundaries
+        this.minX = h.getBoxMinX();
+        this.minY = h.getBoxMinY();
+
+        this.maxX = h.getBoxMaxX();
+        this.maxY = h.getBoxMaxY();
+
+
         int total = 0;
-        AbstractShape s;
+        AbstractShape s; // this will be reused to create each item
         while ((s = r.next()) != null) {
+
+            s.getHeader().getRecordNumber();
 
             switch (s.getShapeType()) {
                 case POINT:
@@ -118,9 +101,17 @@ public class GISDisplay {
                                 + " points.");
                     }
                     break;
+
+
+                //// OUR PRIMARY CASE - Build the Reach objects here
                 case POLYLINE:
-                    System.out.println("WHAT WHAT");
+                    PolylineShape aPolyline = (PolylineShape) s;
+                    for (int i = 0; i < aPolyline.getNumberOfParts(); i++) {
+                        // Create each polyline
+                        reaches.add(new Reach(aPolyline.getPointsOfPart(i), s.getHeader().getRecordNumber()));
+                    }
                     break;
+
                 default:
                     System.out.println("Read other type of shape.");
             }
@@ -129,7 +120,9 @@ public class GISDisplay {
 
         System.out.println("Total shapes read: " + total);
 
-        is.close();
+        hasParsedMapData = true;
+
+        is.close(); // close the input stream
     }
 
     /**
@@ -137,6 +130,7 @@ public class GISDisplay {
      * sink order, they intersect, ignores ocean
      */
     private void sortReaches() {
+        //TODO: Correct this method for using the new Reaches GIS style
          double x, y;
          for (int i = 0; i < reaches.size(); i++) {
             x = reaches.get(i).getSinkX();
@@ -153,45 +147,7 @@ public class GISDisplay {
 
     }
 
-    private void setBounds(){
-        for (Reach reach : reaches){
-            if (reach.sourceX < minX){
-                minX = (int)reach.sourceX;
-                continue;
-            }
-            if (reach.sourceX > maxX){
-                maxX = (int)reach.sourceX;
-                continue;
-            }
-            if (reach.sourceY < minY){
-                minY = (int)reach.sourceY;
-                continue;
-            }
-            if (reach.sourceY > maxY){
-                maxY = (int)reach.sourceY;
-                continue;
-            }
 
-
-            if (reach.sinkX < minX) {
-                minX = (int)reach.sinkX;
-                continue;
-            }
-            if (reach.sinkX > maxX) {
-                maxX = (int)reach.sinkX;
-                continue;
-            }
-            if (reach.sinkY < minY) {
-                minY = (int)reach.sinkY;
-                continue;
-            }
-            if (reach.sinkY > maxY) {
-                maxY = (int)reach.sinkY;
-            }
-        }
-
-        // the boundaries should be set now
-    }
 
 
     public BufferedImage getMapImage(){
@@ -210,15 +166,44 @@ public class GISDisplay {
         g2d.fillRect(0, 0, Life.WINDOW_WIDTH * 2, Life.WINDOW_HEIGHT * 2);
 
         g2d.setColor(new Color(0, 60, 128));
+
         // Draw the line data to the graphics context
         for (Reach reach : reaches) {
-            // TODO: Normalize the coordinates to the windowspace and manage conversion to integers
-            g2d.drawLine((int) reach.sourceX * 100, (int) reach.sourceY * 100, (int) reach.sinkX * 100, (int) reach.sinkY * 100);
+            PointData[] points = reach.getPoints();
+
+            for (int i = 0; i < points.length - 1; i++) {
+                PointData point = points[i];
+                PointData nextPoint = points[i+1];
+
+                // Draw a line for each segment of the polyline
+                g2d.drawLine(x(point.getX()), y(point.getY()), x(nextPoint.getX()), y(nextPoint.getY()));
+
+            }
         }
 
         return cachedMapData;
     }
 
+    /**
+     * Normalizes an X coordinate from GIS space to window space.
+     *
+     * @param x the double X coordinate to be translated
+     * @return the coordinate translated to the windowspace
+     */
+    private int x(double x){
+        return (int) ((x - minX) * (Life.WINDOW_WIDTH / (maxX - minX)));
+
+    }
+
+    /**
+     * Normalizes a Y coordinate from GIS space to window space.
+     *
+     * @param y the double Y coordinate to be translated
+     * @return the coordinate translated to the windowspace
+     */
+    private int y(double y){
+        return (int) (Life.WINDOW_HEIGHT - (y - minY) * (Life.WINDOW_HEIGHT / (maxY - minY)));
+    }
 
 
     public ArrayList<Reach> getReaches(){
@@ -226,19 +211,19 @@ public class GISDisplay {
     }
 
 
-    public int getMinX() {
+    public double getMinX() {
         return minX;
     }
 
-    public int getMinY() {
+    public double getMinY() {
         return minY;
     }
 
-    public int getMaxX() {
+    public double getMaxX() {
         return maxX;
     }
 
-    public int getMaxY() {
+    public double getMaxY() {
         return maxY;
     }
 

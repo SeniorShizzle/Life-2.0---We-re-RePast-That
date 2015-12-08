@@ -30,6 +30,7 @@ public class Life extends JFrame {
         // Set the size of the window
         this.setMinimumSize(new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT));
         this.setPreferredSize(new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT));
+        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         // Add the simulation display to the frame
         mainDisplay = new SimulationDisplay(this);
@@ -39,8 +40,6 @@ public class Life extends JFrame {
         // Display the window
         this.setVisible(true);
     }
-
-
 
 
 }

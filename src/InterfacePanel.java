@@ -1,5 +1,6 @@
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.tree.ExpandVetoException;
 
 import java.awt.*;
 import java.awt.event.ActionListener;
@@ -68,7 +69,7 @@ public class InterfacePanel extends JPanel {
 
             juicyJ.setCurrentDirectory(new File("./")); // Set directory to Home
             FileNameExtensionFilter filter = new FileNameExtensionFilter(
-                    "CSV Shape Files", "csv", "txt", "text");
+                    "ArcGIS™ Shape Files", "shp", "zip");
             juicyJ.setFileFilter(filter); // Add the file filter to the chooser
 
             // Returns a constant value depending on if the user selected a file or not
@@ -82,7 +83,11 @@ public class InterfacePanel extends JPanel {
 
                 //// PARSE THE MAP FILE
                 GISDisplay mapDisplay = GISDisplay.getInstance();
-                mapDisplay.parseMapFile(mapFile);
+                try {
+                    mapDisplay.parseMapFile(mapFile);
+                } catch (Exception e){
+                    System.out.println(e.getMessage());
+                }
 
                 try { // Adding the checkboxes and reach lists
 
