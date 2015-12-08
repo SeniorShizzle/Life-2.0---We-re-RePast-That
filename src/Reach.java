@@ -1,26 +1,29 @@
 import org.nocrala.tools.gis.data.esri.shapefile.shape.PointData;
 
-import java.awt.*;
-
 public class Reach {
 
+	//// OLD
 	public double sourceX;
 	public double sourceY;
 	public double length;
 	public double sinkX;
 	public double sinkY;
-	private int reachID;
+	//// END OLD
+
+	private final int reachID;
 	private int nextID;
 
 
-
-
+	/** A primitive array of PointData objects representing GIS data points as a polyline */
     private PointData[] points;
+
 
 	public Reach(int reachID, double sourceX, double sourceY, double sinkX,
 			double sinkY, int nextID) {
 		this.sourceX = sourceX;
 		this.sourceY = sourceY;
+
+		this.reachID = reachID;
 
 		this.sinkX = sinkX;
 		this.sinkY = sinkY;
@@ -29,13 +32,17 @@ public class Reach {
 		this.nextID = nextID;
 	}
 
-	public Reach(PointData[] points, int reachID){
 
+	/**
+	 * Constructs a Reach object with the given points representing a polyline in GIS space, and a reachID, from the
+	 * GIS data.
+	 * @param points the array of {@code Point} in GIS space
+	 * @param reachID the integer ID of the reach
+	 */
+	public Reach(PointData[] points, int reachID){
         this.reachID = reachID;
 		this.points = points;
 	}
-
-
 
 
 
@@ -75,9 +82,6 @@ public class Reach {
 		return reachID;
 	}
 
-	public void setReachID(int reachID) {
-		this.reachID = reachID;
-	}
 
 	public int getNextID() {
 		return nextID ;
@@ -93,7 +97,7 @@ public class Reach {
 	}
 
     public PointData[] getPoints() {
-        return points;
+        return this.points;
     }
 
 }

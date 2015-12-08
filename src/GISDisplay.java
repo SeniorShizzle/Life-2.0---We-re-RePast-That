@@ -16,6 +16,7 @@ import java.util.ArrayList;
 
 public class GISDisplay {
 
+    /** The ArrayList of Reach objects represented by our GIS Data */
     private ArrayList<Reach> reaches = new ArrayList<>();
 
     private double minX;
@@ -35,6 +36,7 @@ public class GISDisplay {
     /** TRUE if the map data has been parsed */
     private boolean hasParsedMapData = false;
 
+    /** Returns the shared instance of the GISDisplay class */
     public static GISDisplay getInstance(){
         if (instance == null) instance = new GISDisplay();
 
@@ -49,6 +51,12 @@ public class GISDisplay {
         // Private for singletondom
     }
 
+    /**
+     * Parses the GIS file data from a ".shp" file. Creates Reach objects.
+     *
+     * @param file the File object representing an ArcGIS Shape File
+     * @throws Exception if the file data is corrupt or an improper file format is passed
+     */
     public void parseMapFile(File file) throws Exception {
 
         this.mapFile = file;
@@ -100,10 +108,7 @@ public class GISDisplay {
                     PolylineShape aPolyline = (PolylineShape) s;
                     for (int i = 0; i < aPolyline.getNumberOfParts(); i++) {
                         // Create each polyline
-                        // PointData[] points = aPolyline.getPointsOfPart(i);
                         reaches.add(new Reach(aPolyline.getPointsOfPart(i), s.getHeader().getRecordNumber()));
-
-                        // System.out.println("- part " + i + " has " + points.length + " points.");
                     }
                     break;
 
@@ -125,6 +130,7 @@ public class GISDisplay {
      * sink order, they intersect, ignores ocean
      */
     private void sortReaches() {
+        //TODO: Correct this method for using the new Reaches GIS style
          double x, y;
          for (int i = 0; i < reaches.size(); i++) {
             x = reaches.get(i).getSinkX();
@@ -160,9 +166,9 @@ public class GISDisplay {
         g2d.fillRect(0, 0, Life.WINDOW_WIDTH * 2, Life.WINDOW_HEIGHT * 2);
 
         g2d.setColor(new Color(0, 60, 128));
+
         // Draw the line data to the graphics context
         for (Reach reach : reaches) {
-            // TODO: Normalize the coordinates to the windowspace and manage conversion to integers
             PointData[] points = reach.getPoints();
 
             for (int i = 0; i < points.length - 1; i++) {
@@ -173,17 +179,28 @@ public class GISDisplay {
                 g2d.drawLine(x(point.getX()), y(point.getY()), x(nextPoint.getX()), y(nextPoint.getY()));
 
             }
-            //g2d.drawLine((int) reach.sourceX * 100, (int) reach.sourceY * 100, (int) reach.sinkX * 100, (int) reach.sinkY * 100);
         }
 
         return cachedMapData;
     }
 
+    /**
+     * Normalizes an X coordinate from GIS space to window space.
+     *
+     * @param x the double X coordinate to be translated
+     * @return the coordinate translated to the windowspace
+     */
     private int x(double x){
         return (int) ((x - minX) * (Life.WINDOW_WIDTH / (maxX - minX)));
 
     }
 
+    /**
+     * Normalizes a Y coordinate from GIS space to window space.
+     *
+     * @param y the double Y coordinate to be translated
+     * @return the coordinate translated to the windowspace
+     */
     private int y(double y){
         return (int) (Life.WINDOW_HEIGHT - (y - minY) * (Life.WINDOW_HEIGHT / (maxY - minY)));
     }
