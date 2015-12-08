@@ -1,5 +1,7 @@
 import org.nocrala.tools.gis.data.esri.shapefile.shape.PointData;
 
+import java.util.ArrayList;
+
 public class Reach {
 
 	//// OLD
@@ -13,13 +15,15 @@ public class Reach {
 	private final int reachID;
 	private int nextID;
 
+    /** An ArrayList of reaches that come after this one. Wow reaches */
+    private ArrayList<Reach> nextReaches;
+
 
 	/** A primitive array of PointData objects representing GIS data points as a polyline */
     private PointData[] points;
 
 
-	public Reach(int reachID, double sourceX, double sourceY, double sinkX,
-			double sinkY, int nextID) {
+	public Reach(int reachID, double sourceX, double sourceY, double sinkX, double sinkY, int nextID) {
 		this.sourceX = sourceX;
 		this.sourceY = sourceY;
 
@@ -53,7 +57,6 @@ public class Reach {
 	public PointData getSink(){
 		return this.points[points.length - 1];
 	}
-
 
 
 	public double getSourceX() {
@@ -92,11 +95,9 @@ public class Reach {
 		return reachID;
 	}
 
-
 	public int getNextID() {
 		return nextID ;
 	}
-
 
 	public double getLength() {
 		return length;
@@ -110,4 +111,11 @@ public class Reach {
         return this.points;
     }
 
+    public ArrayList<Reach> getNextReaches() {
+        return nextReaches;
+    }
+    
+    public void addNextReach(Reach reach){
+        this.nextReaches.add(reach);
+    }
 }
