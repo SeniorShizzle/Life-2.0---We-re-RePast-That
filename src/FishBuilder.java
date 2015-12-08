@@ -118,7 +118,7 @@ public class FishBuilder {
     customInterfacePanel2.setVisible(true);
 
 
-	//Fish newFish = new Fish(ruleTable);
+	Fish newFish = new Fish(ruleTable);
 
 }
 

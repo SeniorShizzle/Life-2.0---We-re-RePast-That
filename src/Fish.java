@@ -17,18 +17,25 @@ public class Fish{
 	private long currentTick;
 	private Reach currentReach;
 	private int counter = 0;
+	private static Reach initialReach;
 
-	public Fish(ArrayList<Rule> ruleTable, Reach initialReach){
-		this.age = 0.0;
+	public Fish(ArrayList<Rule> ruleTable){
+		this.age = getAge();
 //		this.birthday = currentTick;
 		this.currentState = FishLifeState.EGG_INCUBATION;
 		this.rules = ruleTable;
-		this.currentReach = initialReach;
+//		this.currentReach = getInitialReach;
 		setPosition(this.currentReach, 0);
 		this.fishID = ID;
 		ID++;
+		System.out.println("Fish reach = " + initialReach);
 	}
 	
+	public static void setInitialReach(Reach reach) {
+	initialReach = reach;
+	System.out.println("Reach : " + reach.getReachID());
+	}
+
 	public void consultLifeTable(ArrayList<Rule> rules){
 		int state = 0; double rand;
 		int currentState = FishLifeState.valueOf(this.getState().toString()).ordinal(); //returns the fish's state as int
@@ -89,8 +96,10 @@ public class Fish{
 		
 		else{
 			counter = 0;
-			Reach newReach = currentReach;
-			//newReach will = currentReach.nextReach();
+			ArrayList<Reach> nextReaches = currentReach.getNextReaches();
+			int rand = (int) Math.random() * nextReaches.size();
+			
+			Reach newReach = nextReaches.get(rand);
 			setPosition(newReach, counter);
 		}
 	}

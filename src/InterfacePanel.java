@@ -94,10 +94,15 @@ public class InterfacePanel extends JPanel {
                     JPanel reachPanel = new JPanel(); // Create a new panel to fill the frame
 
                     // Actionlistener that gets called every time you click a button
-                    ActionListener reachListener = EventHandler.create(ActionListener.class, this, "reachSelected");
+//                    ActionListener reachListener = EventHandler.create(ActionListener.class, this, "reachSelected");
+//                    ActionListen reachListener = new ActionListener();
+                    reachPanel.setLayout(new GridLayout(GISDisplay.getInstance().getReaches().size() + 1, 1));
 
                     // Call to ReachBoxes automagically populates the ReachPanel with checkboxes
-                    // TODO: Create reach boxes with some awesome files
+                    //TODO: Must redefine features
+//                    ReachBoxes(GISDisplay.getInstance().getReaches(), reachPanel, reachListener, 0);
+                    ReachBoxes(GISDisplay.getInstance().getReaches(), reachPanel, 0);
+
 
                     // NOTE: At this point, ReachPanel will be populated with children JCheckBox objects
                     // Add the Done button
@@ -248,7 +253,9 @@ public class InterfacePanel extends JPanel {
      *
      * @parameters Reach, ActionListener
      */
-    public void ReachBoxes(ArrayList<Reach> features, JPanel reachPanel, ActionListener listener, int i) {
+//    public void ReachBoxes(ArrayList<Reach> features, JPanel reachPanel, ActionListener listener, int i) {
+    public void ReachBoxes(ArrayList<Reach> features, JPanel reachPanel, int i) {
+
         if (i >= features.size()) {
             return;
         }
@@ -257,11 +264,16 @@ public class InterfacePanel extends JPanel {
         String id = "" + reach.getReachID();
 
         JCheckBox choice = new JCheckBox(id);
-        choice.addActionListener(listener);
+//        choice.addActionListener(listener);
         reachPanel.add(choice);
-
+      
+        choice.addActionListener(event -> {
+          Fish.setInitialReach(features.get(i));
+       });
         if (i < features.size()) {
-            ReachBoxes(features, reachPanel, listener, i + 1); // Recursive. Consider replacing with loop later
+//            ReachBoxes(features, reachPanel, listener, i + 1); // Recursive. Consider replacing with loop later
+            ReachBoxes(features, reachPanel, i + 1); // Recursive. Consider replacing with loop later
+
         }
     }
 
