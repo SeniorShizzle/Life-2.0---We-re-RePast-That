@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 
 import java.io.File;
+import java.util.ArrayList;
 
 public class SimulationDisplay extends JPanel implements InterfacePanelDelegate {
 
@@ -21,6 +22,9 @@ public class SimulationDisplay extends JPanel implements InterfacePanelDelegate 
 
     /** The main interface panel, for selecting interface parameters */
     private InterfacePanel interfacePanel;
+
+    /** The ArrayList of fish objects */
+    private ArrayList<Fish> fishies = new ArrayList<>();
 
 
 
@@ -40,7 +44,6 @@ public class SimulationDisplay extends JPanel implements InterfacePanelDelegate 
 
         fishHell.setVisible(true);
         fishHell.toFront();
-
 
         run();
     }
@@ -75,6 +78,10 @@ public class SimulationDisplay extends JPanel implements InterfacePanelDelegate 
         // TODO: Update each fish based on the tick count
         ball.update();
 
+        for (Fish fishy : fishies){
+            fishy.update(this.tickCount);
+        }
+
 
     }
 
@@ -101,7 +108,31 @@ public class SimulationDisplay extends JPanel implements InterfacePanelDelegate 
         g2d.drawString("So long, and thanks for all the fish!", 100, 100);
         //g2d.fillOval((int)ball.x, (int)ball.y, ball.diameter, ball.diameter);
 
+        Image fishImg = Toolkit.getDefaultToolkit().getImage(tickCount % 60 > 30 ? "./data/fish_small.png" : "./data/fish_small_down.png");
+        for (Fish fishy : fishies){
+            g2d.drawImage(fishImg, x(fishy.x), y(fishy.y), null);
+        }
 
+    }
+
+    /**
+     * Normalizes an X coordinate from GIS space to window space.
+     *
+     * @param x the double X coordinate to be translated
+     * @return the coordinate translated to the windowspace
+     */
+    private int x(double x) {
+        return (int) ((x - gisDisplay.getMinX()) * (Life.WINDOW_WIDTH / (gisDisplay.getMaxX() - gisDisplay.getMinX())));
+    }
+
+    /**
+     * Normalizes a Y coordinate from GIS space to window space.
+     *
+     * @param y the double Y coordinate to be translated
+     * @return the coordinate translated to the windowspace
+     */
+    private int y(double y) {
+        return (int) (Life.WINDOW_HEIGHT - (y - gisDisplay.getMinY()) * (Life.WINDOW_HEIGHT / (gisDisplay.getMaxY() - gisDisplay.getMinY())));
     }
 
     /**
@@ -116,6 +147,11 @@ public class SimulationDisplay extends JPanel implements InterfacePanelDelegate 
     @Override
     public void updateModel() {
         // TODO: update model parameters based on interface panel settings
+
+        for (int i = 0; i < 100; i++) {
+            fishies.add(new Fish());
+        }
+
 
         System.out.println(interfacePanel.getNumberOfAgents());
     }
