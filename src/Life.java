@@ -26,6 +26,7 @@ public class Life extends JFrame {
         this.setTitle("SecondLife — We're RePast That™");
         this.setBackground(new Color(31, 31, 31));
         this.setResizable(false);
+        this.setLayout(new GridLayout(1, 2));
 
         // Set the size of the window
         this.setMinimumSize(new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT));
@@ -36,10 +37,13 @@ public class Life extends JFrame {
         mainDisplay = new SimulationDisplay(this);
         this.add(mainDisplay);
         mainDisplay.setBounds(this.getBounds());
+        this.add(InterfacePanel.getInstance());
+        mainDisplay.setBounds(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
 
         // Display the window
         this.setVisible(true);
     }
 
+    
 
 }

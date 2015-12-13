@@ -121,7 +121,7 @@ public class SimulationDisplay extends JPanel implements InterfacePanelDelegate 
 	 * coordinate translated to the windowspace -
 	 */
 	private int x(double x) {
-		return (int) ((x - gisDisplay.getMinX()) * (Life.WINDOW_WIDTH / (gisDisplay.getMaxX() - gisDisplay.getMinX())));
+		return (int) ((x - gisDisplay.getMinX()) * ((Life.WINDOW_WIDTH - 500) / (gisDisplay.getMaxX() - gisDisplay.getMinX())));
 	}
 
 	/**
@@ -144,7 +144,6 @@ public class SimulationDisplay extends JPanel implements InterfacePanelDelegate 
 	}
 
 	/**
-	 * 
 	 * @return The ArrayList of fishes
 	 */
 	public ArrayList<Fish> getFishies() {
