@@ -92,7 +92,7 @@ public class InterfacePanel extends JPanel {
                 try { // Adding the checkboxes and reach lists
 
                     JPanel reachPanel = new JPanel(); // Create a new panel to fill the frame
-
+                    
                     // Actionlistener that gets called every time you click a button
 //                    ActionListener reachListener = EventHandler.create(ActionListener.class, this, "reachSelected");
 //                    ActionListen reachListener = new ActionListener();
