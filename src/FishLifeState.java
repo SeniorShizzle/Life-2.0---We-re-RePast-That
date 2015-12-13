@@ -38,9 +38,9 @@ public enum FishLifeState {
 	public static String[] strings() {
 	    FishLifeState[] states = values();
 	    String[] names = new String[states.length];
-
 	    for (int i = 0; i < states.length; i++) {
 	    	names[i] = StringUtils.capitalize(states[i].name().toLowerCase());
+	    	names[i] = names[i].replaceAll("_", " ");
 	    }
 
 	    return names;
