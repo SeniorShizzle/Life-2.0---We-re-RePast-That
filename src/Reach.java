@@ -16,7 +16,7 @@ public class Reach {
 	private int nextID;
 
     /** An ArrayList of reaches that come after this one. Wow reaches */
-    private ArrayList<Reach> nextReaches = new ArrayList<>();
+    ArrayList<Reach> nextReaches = new ArrayList<>();
 
 
 	/** A primitive array of PointData objects representing GIS data points as a polyline */

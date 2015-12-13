@@ -167,7 +167,11 @@ public class GISDisplay {
 
         System.out.println(matchedReaches + " connected.");
     }
-
+    
+    
+    public int reachSize(){
+    	return reaches.size();
+    }
 
 
 

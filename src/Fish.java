@@ -18,6 +18,7 @@ public class Fish{
 	private Reach currentReach;
 	private int counter = 0;
 	private static Reach initialReach;
+	private int reachCounter = 0;
 
 	public Fish(ArrayList<Rule> ruleTable){
 		this.age = getAge();
@@ -25,7 +26,7 @@ public class Fish{
 		this.currentState = FishLifeState.EGG_INCUBATION;
 		this.rules = ruleTable;
 		this.currentReach = initialReach;
-		setPosition(this.currentReach, 0);
+		setPosition(this.currentReach);
 		this.fishID = ID;
 		ID++;
 		
@@ -65,7 +66,7 @@ public class Fish{
 			}
 		}
 		counter++;
-		setPosition(this.currentReach, counter);
+		setPosition(this.currentReach);
 //		updatePosition(this.currentReach, counter);
 	}
 
@@ -115,25 +116,10 @@ public class Fish{
 		return this.currentTick - this.birthday;
 	}
 	
-	private void updatePosition(Reach currentReach, int counter){
 	
-		ArrayList<Reach> nextReaches = currentReach.getNextReaches();
-		int rand = (int) Math.random() * nextReaches.size();
-//		for(int i = 0; i<nextReaches.size(); i++){
-//			System.out.println("Next reach: " + nextReaches.get(i));
-//		}
-		
-		Reach newReach = nextReaches.get(rand);
-		if(newReach != currentReach){
-		setPosition(newReach, counter);
-		}
-		else{
-			updatePosition(currentReach, counter);
-		}
-	}
-	
-	private void setPosition(Reach currentReach, int counter){
+	private void setPosition(Reach currentReach){
 		PointData[] reachPoints = new PointData[(int) currentReach.length];
+		ArrayList<Reach> nextReaches = currentReach.getNextReaches();
 		
 		reachPoints = currentReach.getPoints();
 		
@@ -146,16 +132,22 @@ public class Fish{
 		}
 		
 		else{
-			counter = 0;
-			int rand = (int) Math.random() * currentReach.getNextReaches().size();
-			int index = currentReach.getNextID() + 1;
-			currentReach.getNextReaches().get(index);
+//			int rand = (int) Math.random() * currentReach.nextReaches.size();
+			currentReach = nextReaches.get(currentReach.getNextID() + reachCounter);
+			reachCounter++;
+			
+			if(reachCounter > GISDisplay.getInstance().reachSize()){
+				reachCounter = 0;
+			}
+			this.currentReach = currentReach;
 			reachPoints = currentReach.getPoints();
-
+			
+			this.counter = 0;
 			this.x = reachPoints[counter].getX();
 			this.y = reachPoints[counter].getY();
 			this.position[0] = this.x;
 			this.position[1] = this.y;
+			return;
 		}
 		
 	}
