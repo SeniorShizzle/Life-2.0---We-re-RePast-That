@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 public class InterfacePanel extends JPanel {
 
+
 	/**
 	 * This is the list of our delegate objects. We should notify all of them
 	 * when appropriate
