@@ -88,6 +88,7 @@ public class InterfacePanel extends JPanel {
                     System.out.println(e);
                     e.printStackTrace();
                 }
+        
 
                 try { // Adding the checkboxes and reach lists
 
@@ -175,23 +176,16 @@ public class InterfacePanel extends JPanel {
         });
 
 
-        //creates a drop-down menus for selecting different types of fish
-        //needs an action listener, but I am not sure what the ultimate goal is so
-        //I left it out for now
-        String[] fishTypes = {"test1", "test2", "Rodger", "quail", "Oink etc."};
-        JComboBox<String> fishListDropDown = new JComboBox<String>(fishTypes);
-        fishListDropDown.setSelectedIndex(0);
-        fishListDropDown.setEditable(true);
-        fishListDropDown.setMaximumSize(new Dimension(300, 30));
-        JLabel fishTypeLabel = new JLabel("What type of fish would you like to focus on?");
-
-
+        //creates a drop-down menus for selecting different life stages of fish
+        //needs an action listener
         String[] fishStages = FishLifeState.strings();
         JComboBox<String> fishStagesListDropDown = new JComboBox<>(fishStages);
-        fishStagesListDropDown.setEditable(true);
         fishStagesListDropDown.setSelectedIndex(0);
         fishStagesListDropDown.setMaximumSize(new Dimension(300, 30));
-        JLabel fishStageLabel = new JLabel("What type of life stage would you like to focus on?");
+        JLabel fishStageLabel = new JLabel("Please pick a stage:");
+        JPanel fishStagesPanel = new JPanel();
+        fishStagesPanel.add(fishStageLabel);
+        fishStagesPanel.add(fishStagesListDropDown);
 
 
         // Select GIS button created, GIS file imported theoretically
@@ -235,9 +229,9 @@ public class InterfacePanel extends JPanel {
         spawnCountPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
 
-
         add(filePanel);
         add(stekotaPanel);
+        add(fishStagesPanel);
         add(spawnCountPanel);
 
         // Sincerest apologies to Jessie Jackson
