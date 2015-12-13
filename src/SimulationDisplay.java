@@ -154,7 +154,9 @@ public class SimulationDisplay extends JPanel implements InterfacePanelDelegate 
 		System.out.println(interfacePanel.getNumberOfAgents());
 
 		for (int i = 0; i < 100; i++) {
-			fishies.add(new Fish());
+			ArrayList<Rule> rules = new ArrayList<Rule>();
+			rules = FishBuilder.ruleTable;
+			fishies.add(new Fish(rules));
 		}
 	}
 }

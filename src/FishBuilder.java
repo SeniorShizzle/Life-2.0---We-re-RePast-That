@@ -27,7 +27,7 @@ import com.opencsv.CSVWriter;
 public class FishBuilder {
 	FileReader fishStateTransitionTable;
 	List<String[]> allRows;
-	ArrayList<Rule> ruleTable = new ArrayList<>();
+	static ArrayList<Rule> ruleTable = new ArrayList<>();
 
 	InterfacePanel steveThing = InterfacePanel.getInstance();
 	{

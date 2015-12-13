@@ -24,24 +24,26 @@ public class Fish{
 //		this.birthday = currentTick;
 		this.currentState = FishLifeState.EGG_INCUBATION;
 		this.rules = ruleTable;
-//		this.currentReach = getInitialReach;
+		this.currentReach = initialReach;
 		setPosition(this.currentReach, 0);
 		this.fishID = ID;
 		ID++;
-		System.out.println("Fish reach = " + initialReach);
+		
+		GISDisplay display = GISDisplay.getInstance();
+//		this.x = display.getMinX() + Math.random() * (display.getMaxX() - display.getMinX());
+//		this.y = display.getMinY() + Math.random() * (display.getMaxY() - display.getMinY());
 	}
 
 	
 	public static void setInitialReach(Reach reach) {
 	initialReach = reach;
-	System.out.println("Reach : " + reach.getReachID());
 }
 
-	public Fish(){
-		GISDisplay display = GISDisplay.getInstance();
-		this.x = display.getMinX() + Math.random() * (display.getMaxX() - display.getMinX());
-		this.y = display.getMinY() + Math.random() * (display.getMaxY() - display.getMinY());
-	}
+//	public Fish(){
+//		GISDisplay display = GISDisplay.getInstance();
+//		this.x = display.getMinX() + Math.random() * (display.getMaxX() - display.getMinX());
+//		this.y = display.getMinY() + Math.random() * (display.getMaxY() - display.getMinY());
+//	}
 
 	public void consultLifeTable(ArrayList<Rule> rules){
 		int state = 0; double rand;
@@ -64,6 +66,7 @@ public class Fish{
 		}
 		counter++;
 		setPosition(this.currentReach, counter);
+//		updatePosition(this.currentReach, counter);
 	}
 
 	private double vy = Math.random() > 0.5 ? Math.random() * -20 : Math.random() * 20;
@@ -71,27 +74,28 @@ public class Fish{
 
 	public void update(Long tick){
 		setTick(tick);
-		//consultLifeTable(this.rules);
+//		updatePosition(currentReach);
+		consultLifeTable(this.rules);
 
-		this.vy += vy > 0 ? 5 : -5;
-
-		if (vy > 500) vy = 500;
-		if (vy < -500) vy = -500;
-
-		this.y -= vy;
-		if (this.y < GISDisplay.getInstance().getMinY() || this.y > GISDisplay.getInstance().getMaxY()){
-			this.vy *= -1;
-		}
-
-		this.vx += vx > 0 ? 5 : -5;
-
-		if (vx > 500) vx = 500;
-		if (vx < -500) vx = -500;
-
-		this.x -= vx;
-		if (this.x < GISDisplay.getInstance().getMinX() || this.x > GISDisplay.getInstance().getMaxX()) {
-			this.vx *= -1;
-		}
+//		this.vy += vy > 0 ? 5 : -5;
+//
+//		if (vy > 500) vy = 500;
+//		if (vy < -500) vy = -500;
+//
+//		this.y -= vy;
+//		if (this.y < GISDisplay.getInstance().getMinY() || this.y > GISDisplay.getInstance().getMaxY()){
+//			this.vy *= -1;
+//		}
+//
+//		this.vx += vx > 0 ? 5 : -5;
+//
+//		if (vx > 500) vx = 500;
+//		if (vx < -500) vx = -500;
+//
+//		this.x -= vx;
+//		if (this.x < GISDisplay.getInstance().getMinX() || this.x > GISDisplay.getInstance().getMaxX()) {
+//			this.vx *= -1;
+//		}
 
 	}
 
@@ -111,6 +115,23 @@ public class Fish{
 		return this.currentTick - this.birthday;
 	}
 	
+	private void updatePosition(Reach currentReach, int counter){
+	
+		ArrayList<Reach> nextReaches = currentReach.getNextReaches();
+		int rand = (int) Math.random() * nextReaches.size();
+//		for(int i = 0; i<nextReaches.size(); i++){
+//			System.out.println("Next reach: " + nextReaches.get(i));
+//		}
+		
+		Reach newReach = nextReaches.get(rand);
+		if(newReach != currentReach){
+		setPosition(newReach, counter);
+		}
+		else{
+			updatePosition(currentReach, counter);
+		}
+	}
+	
 	private void setPosition(Reach currentReach, int counter){
 		PointData[] reachPoints = new PointData[(int) currentReach.length];
 		
@@ -121,18 +142,22 @@ public class Fish{
 		this.y = reachPoints[counter].getY();
 		this.position[0] = this.x;
 		this.position[1] = this.y;
-		System.out.println("x : " + this.x + ", y : " + this.y);
 		return;
 		}
 		
 		else{
 			counter = 0;
-			ArrayList<Reach> nextReaches = currentReach.getNextReaches();
-			int rand = (int) Math.random() * nextReaches.size();
-			
-			Reach newReach = nextReaches.get(rand);
-			setPosition(newReach, counter);
+			int rand = (int) Math.random() * currentReach.getNextReaches().size();
+			int index = currentReach.getNextID() + 1;
+			currentReach.getNextReaches().get(index);
+			reachPoints = currentReach.getPoints();
+
+			this.x = reachPoints[counter].getX();
+			this.y = reachPoints[counter].getY();
+			this.position[0] = this.x;
+			this.position[1] = this.y;
 		}
+		
 	}
 	
 	public String[] getCSVInfo(){
@@ -142,8 +167,10 @@ public class Fish{
 		String id = Integer.toString(this.ID);
 		String age = Double.toString(getAge());
 		String state = FishLifeState.valueOf(this.getState().toString()).toString();
-		String location = "null";
-		String distanceToOrigin = "null";
+		String location = "X: " + this.x + "Y: " + this.y;
+		double distanceOriginX = initialReach.sourceX - this.x;
+		double distanceOriginY = initialReach.sourceY - this.y;
+		String distanceToOrigin = "X : " + distanceOriginX + "Y: " + distanceOriginY;
 		String distanceToTerminal = "null";
 
 		String info[] = {tick, id, age, state , location, distanceToOrigin, distanceToTerminal, "\n"};

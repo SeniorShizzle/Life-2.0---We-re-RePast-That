@@ -153,9 +153,9 @@ public class GISDisplay {
             // If the reach has a next, find it and set it.
             for (Reach otherReach : reaches){
                 if (otherReach == reach) continue; // don't add ourselves, dummy
-
-                if (reach.getSink().getX() == otherReach.getSource().getX() &&
-                        reach.getSink().getY() == otherReach.getSource().getY()) {
+                
+                if ((Math.abs(reach.getSink().getX() - otherReach.getSource().getX()) < 1000000) &&
+                        Math.abs(reach.getSink().getY() - otherReach.getSource().getY()) < 1000000) {
                     reach.addNextReach(otherReach);
                     //System.out.println("Reach " + reach + " is connecting to " + otherReach + ". Wow.");
                     matchedReaches++;
