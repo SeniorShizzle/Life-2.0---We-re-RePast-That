@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 public class SimulationDisplay extends JPanel implements InterfacePanelDelegate {
 
+
 	/**
 	 * The serial primary incrementer used to control simulation progress.
 	 * Incremented once per frame.
@@ -57,16 +58,16 @@ public class SimulationDisplay extends JPanel implements InterfacePanelDelegate 
 		Timer timer = new Timer(17, ActionEvent -> {
 			// Each iteration of the timer:
 
-				// Update the tick counter
-				tickCount++;
+			// Update the tick counter
+			tickCount++;
 
-				// Run the update() subroutine
-				this.update();
+			// Run the update() subroutine
+			this.update();
 
-				// Repaint the main display
-				this.repaint();
+			// Repaint the main display
+			this.repaint();
 
-			});
+		});
 
 		// Start the timer
 		timer.start();
@@ -99,17 +100,15 @@ public class SimulationDisplay extends JPanel implements InterfacePanelDelegate 
 		g2d.drawImage(gisDisplay.getMapImage(), 0, 0, null);
 
 		// // Draw the bouncy ball (for fun)
-		Image img1 = Toolkit.getDefaultToolkit().getImage(
-				tickCount % 60 > 30 ? "./data/fish.png"
-						: "./data/fish_down.png");
+		Image img1 = Toolkit.getDefaultToolkit()
+				.getImage(tickCount % 60 > 30 ? "./data/fish.png" : "./data/fish_down.png");
 		g2d.drawImage(img1, (int) ball.x, (int) ball.y, null);
 
 		g2d.drawString("So long, and thanks for all the fish!", 100, 100);
 		// g2d.fillOval((int)ball.x, (int)ball.y, ball.diameter, ball.diameter);
 
-		Image fishImg = Toolkit.getDefaultToolkit().getImage(
-				tickCount % 60 > 30 ? "./data/fish_small.png"
-						: "./data/fish_small_down.png");
+		Image fishImg = Toolkit.getDefaultToolkit()
+				.getImage(tickCount % 60 > 30 ? "./data/fish_small.png" : "./data/fish_small_down.png");
 		for (Fish fishy : fishies) {
 			g2d.drawImage(fishImg, x(fishy.x), y(fishy.y), null);
 		}
@@ -117,13 +116,12 @@ public class SimulationDisplay extends JPanel implements InterfacePanelDelegate 
 	}
 
 	/**
-	 * - * Normalizes an X coordinate from GIS space to window space. - * - * @param
-	 * x the double X coordinate to be translated - * @return the coordinate
-	 * translated to the windowspace -
+	 * - * Normalizes an X coordinate from GIS space to window space. - * -
+	 * * @param x the double X coordinate to be translated - * @return the
+	 * coordinate translated to the windowspace -
 	 */
 	private int x(double x) {
-		return (int) ((x - gisDisplay.getMinX()) * (Life.WINDOW_WIDTH / (gisDisplay
-				.getMaxX() - gisDisplay.getMinX())));
+		return (int) ((x - gisDisplay.getMinX()) * (Life.WINDOW_WIDTH / (gisDisplay.getMaxX() - gisDisplay.getMinX())));
 	}
 
 	/**
@@ -134,9 +132,8 @@ public class SimulationDisplay extends JPanel implements InterfacePanelDelegate 
 	 * @return the coordinate translated to the windowspace
 	 */
 	private int y(double y) {
-		return (int) (Life.WINDOW_HEIGHT - (y - gisDisplay.getMinY())
-				* (Life.WINDOW_HEIGHT / (gisDisplay.getMaxY() - gisDisplay
-						.getMinY())));
+		return (int) (Life.WINDOW_HEIGHT
+				- (y - gisDisplay.getMinY()) * (Life.WINDOW_HEIGHT / (gisDisplay.getMaxY() - gisDisplay.getMinY())));
 	}
 
 	/**
@@ -144,6 +141,14 @@ public class SimulationDisplay extends JPanel implements InterfacePanelDelegate 
 	 */
 	public long getTickCount() {
 		return this.tickCount;
+	}
+
+	/**
+	 * 
+	 * @return The ArrayList of fishes
+	 */
+	public ArrayList<Fish> getFishies() {
+		return fishies;
 	}
 
 	/** Updates the model. Delegate method called by our GISDisplay object */

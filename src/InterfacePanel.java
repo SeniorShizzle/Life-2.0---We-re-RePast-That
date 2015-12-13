@@ -1,6 +1,8 @@
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+import com.sun.xml.internal.ws.util.StringUtils;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,7 +11,6 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class InterfacePanel extends JPanel {
-
 
 	/**
 	 * This is the list of our delegate objects. We should notify all of them
@@ -198,11 +199,17 @@ public class InterfacePanel extends JPanel {
 		JComboBox<String> fishStagesListDropDown = new JComboBox<>(fishStages);
 		fishStagesListDropDown.setSelectedIndex(0);
 		fishStagesListDropDown.setMaximumSize(new Dimension(300, 30));
-		fishStagesListDropDown.addActionListener(new ActionListener() { 
-			//prints selected life stage and number of fish in that stage
-			@Override 
+		fishStagesListDropDown.addActionListener(new ActionListener() {
+			// prints selected life stage and number of fish in that stage
+			@Override
 			public void actionPerformed(ActionEvent event) {
-				String response = fishStagesListDropDown.getSelectedItem().toString();
+				int counter = 0;
+				String selected = fishStagesListDropDown.getSelectedItem().toString();
+				SimulationDisplay sd = new SimulationDisplay(null); //not sure what the parent JFrame is 
+				for (Fish fin : sd.getFishies()) {
+					counter += (fin.getState().toString().toLowerCase().equals(selected.toLowerCase())) ? 1 : 0;
+				}
+				String response = "Number of fish in " + selected + ": " + Integer.toString(counter);
 				System.out.println(response);
 			}
 		});
