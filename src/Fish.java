@@ -136,7 +136,7 @@ public class Fish{
 			currentReach = nextReaches.get(currentReach.getNextID() + reachCounter);
 			reachCounter++;
 			
-			if(reachCounter > GISDisplay.getInstance().reachSize()){
+			if(reachCounter >= GISDisplay.getInstance().reachSize() - 1){
 				reachCounter = 0;
 			}
 			this.currentReach = currentReach;
