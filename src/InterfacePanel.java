@@ -198,6 +198,7 @@ public class InterfacePanel extends JPanel {
 		String[] fishStages = FishLifeState.strings();
 		JComboBox<String> fishStagesListDropDown = new JComboBox<>(fishStages);
 		fishStagesListDropDown.setSelectedIndex(0);
+		JLabel answer = new JLabel();
 		fishStagesListDropDown.setMaximumSize(new Dimension(300, 30));
 		fishStagesListDropDown.addActionListener(new ActionListener() {
 			// prints selected life stage and number of fish in that stage
@@ -209,14 +210,14 @@ public class InterfacePanel extends JPanel {
 				for (Fish fin : sd.getFishies()) {
 					counter += (fin.getState().toString().toLowerCase().equals(selected.toLowerCase())) ? 1 : 0;
 				}
-				String response = "Number of fish in " + selected + ": " + Integer.toString(counter);
-				System.out.println(response);
+				answer.setText("Number of fish in " + selected + ": " + Integer.toString(counter));
 			}
 		});
 		JLabel fishStageLabel = new JLabel("Please pick a life stage:");
 		JPanel fishStagesPanel = new JPanel();
 		fishStagesPanel.add(fishStageLabel);
 		fishStagesPanel.add(fishStagesListDropDown);
+		fishStagesPanel.add(answer);
 
 		// Select GIS button created, GIS file imported theoretically
 		JLabel spawnLabel = new JLabel("Number of agents ");
