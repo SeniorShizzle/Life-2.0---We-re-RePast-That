@@ -4,8 +4,8 @@ import java.awt.*;
 
 public class Life extends JFrame {
 
-    public static final int WINDOW_WIDTH = 1000;
-    public static final int WINDOW_HEIGHT = 1000;
+    public static final int WINDOW_WIDTH = 1200;
+    public static final int WINDOW_HEIGHT = 800;
 
     /** The main simulation used by the window. */
     private SimulationDisplay mainDisplay;
@@ -27,7 +27,8 @@ public class Life extends JFrame {
         this.setBackground(new Color(31, 31, 31));
         this.setResizable(false);
         this.setLayout(new GridLayout(1, 2));
-
+        
+      
         // Set the size of the window
         this.setMinimumSize(new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT));
         this.setPreferredSize(new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT));
@@ -38,8 +39,7 @@ public class Life extends JFrame {
         this.add(mainDisplay);
         mainDisplay.setBounds(this.getBounds());
         this.add(InterfacePanel.getInstance());
-        mainDisplay.setBounds(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
-
+        
         // Display the window
         this.setVisible(true);
     }

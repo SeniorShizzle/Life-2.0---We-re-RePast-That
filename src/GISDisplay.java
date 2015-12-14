@@ -212,7 +212,7 @@ public class GISDisplay {
      * @return the coordinate translated to the windowspace
      */
     private int x(double x){
-        return (int) ((x - minX) * (Life.WINDOW_WIDTH / (maxX - minX)));
+        return (int) ((x - minX) * ((Life.WINDOW_WIDTH / 2) / (maxX - minX)));
 
     }
 
@@ -223,7 +223,7 @@ public class GISDisplay {
      * @return the coordinate translated to the windowspace
      */
     private int y(double y){
-        return (int) (Life.WINDOW_HEIGHT - (y - minY) * (Life.WINDOW_HEIGHT / (maxY - minY)));
+        return (int) ((Life.WINDOW_HEIGHT /2) + 200 - (y - minY) * ((Life.WINDOW_HEIGHT / 2) / (maxY - minY)));
     }
 
 

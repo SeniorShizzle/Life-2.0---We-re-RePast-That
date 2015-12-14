@@ -56,8 +56,9 @@ public class InterfacePanel extends JPanel {
 		// this is the ultimate container
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		// setLayout(new GridLayout(5,1));
-		setPreferredSize(new Dimension(500, 700));
-		setMinimumSize(new Dimension(400, 600));
+		setPreferredSize(new Dimension(300, 700));
+		setMinimumSize(new Dimension(200, 600));
+		setOpaque(false);
 
 		JButton shapeFileButton = new JButton("Select Map File");
 		JLabel fileName = new JLabel("No File Selected");
@@ -210,8 +211,7 @@ public class InterfacePanel extends JPanel {
 				for (Fish fin : sd.getFishies()) {
 					counter += (fin.getState().toString().toLowerCase().equals(selected.toLowerCase())) ? 1 : 0;
 				}
-				String response = "Number of fish in " + selected + ": " + Integer.toString(counter);
-				answer.setText(response);
+				answer.setText("Number of fish in " + selected + ": " + Integer.toString(counter));
 			}
 		});
 		JLabel fishStageLabel = new JLabel("Please pick a life stage:");

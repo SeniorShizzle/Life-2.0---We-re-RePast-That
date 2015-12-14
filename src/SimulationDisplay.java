@@ -38,14 +38,6 @@ public class SimulationDisplay extends JPanel implements InterfacePanelDelegate 
 
 		interfacePanel = InterfacePanel.getInstance();
 		interfacePanel.registerDelegate(this);
-
-		JFrame fishHell = new JFrame("Simulation Parameters");
-		fishHell.add(interfacePanel);
-		fishHell.pack();
-
-		fishHell.setVisible(true);
-		fishHell.toFront();
-
 		run();
 	}
 
@@ -104,9 +96,6 @@ public class SimulationDisplay extends JPanel implements InterfacePanelDelegate 
 				.getImage(tickCount % 60 > 30 ? "./data/fish.png" : "./data/fish_down.png");
 		g2d.drawImage(img1, (int) ball.x, (int) ball.y, null);
 
-		g2d.drawString("So long, and thanks for all the fish!", 100, 100);
-		// g2d.fillOval((int)ball.x, (int)ball.y, ball.diameter, ball.diameter);
-
 		Image fishImg = Toolkit.getDefaultToolkit()
 				.getImage(tickCount % 60 > 30 ? "./data/fish_small.png" : "./data/fish_small_down.png");
 		for (Fish fishy : fishies) {
@@ -121,7 +110,7 @@ public class SimulationDisplay extends JPanel implements InterfacePanelDelegate 
 	 * coordinate translated to the windowspace -
 	 */
 	private int x(double x) {
-		return (int) ((x - gisDisplay.getMinX()) * ((Life.WINDOW_WIDTH - 500) / (gisDisplay.getMaxX() - gisDisplay.getMinX())));
+		return (int) ((x - gisDisplay.getMinX()) * (Life.WINDOW_WIDTH / (gisDisplay.getMaxX() - gisDisplay.getMinX())));
 	}
 
 	/**
